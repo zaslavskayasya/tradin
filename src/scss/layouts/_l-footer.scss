@@ -1,0 +1,274 @@
+@use '../helpers' as h;
+
+.l-footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 81px 0px 91px;
+    margin-top: 120px;
+}
+.long-content{
+    margin: 0 auto;
+    padding: 0 15px 15px 74px;
+    max-width: 1667px;
+}
+
+.wrap-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo{
+    width: 186px;
+    margin-right: 15px;
+    display: block;
+    margin-bottom: 20px;;
+    img{
+        width: 100%;
+    }
+}
+
+.footer-nav{
+    max-width: 220px;
+    display: flex; 
+    justify-content: space-between;
+    flex-flow: wrap;
+    li{
+        margin-bottom: 23px;
+        text-align: left;
+        width: 49%;
+        a{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            transition: all ease 0.3s;
+            &:hover{
+                color: h.$accent-color;
+            }
+        }
+    }
+}
+
+.part-1{
+    width: 12%;
+}
+.part-2{
+    width: 18%;
+    padding-left: 60px;
+}
+.part-3{
+    width: 25%;
+}
+.part-4{
+    width: 19%;
+}
+
+.wrap-map {
+    overflow: hidden;
+}
+.wrap-map iframe {
+    margin-top: -150px;
+}
+.adres-line {
+    display: flex; 
+    align-items: flex-start;
+    margin-bottom: 38px;;
+
+    .heading {
+        color: h.$accent-color;
+        width: 25%;
+        margin-right: 15px;;
+    }
+    .hedaing-content{
+        width: 85%;
+    }
+    .heading-link{
+        width: 100%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        transition: all ease 0.3s;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;;
+        &:hover{
+            color: h.$accent-color;
+        }
+    }
+}
+
+.soc-block{
+    // display: flex ;
+    margin-bottom: 35px;;
+    // align-items: center;
+}
+
+.social-name{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: left;
+    margin-right: 30px;
+    margin-bottom: 20px;;
+}
+
+.social-ul{
+    display: flex;
+    li{
+        &:not(:last-child){
+            margin-right: 20px;;
+        }
+    }
+    a {
+        width: 44px;
+        height: 44px;
+        display: block;
+        // transition: all ease 0.1s;
+        &:hover{
+            opacity: 0.8;
+            filter: invert(31%) sepia(72%) saturate(5686%) hue-rotate(349deg) brightness(88%) contrast(100%);
+
+        }
+    }
+
+}
+
+  
+  
+  
+
+.copy-block{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-right: 30px;
+    a{
+        color: h.$accent-color;
+    }
+}
+
+
+@media screen and(max-width:1680px){
+    .long-content{
+        padding: 0px 15px;
+    }
+    .part-1{
+        width: 12%;
+    }
+    .part-2{
+        width: 18%;
+        padding-left: 60px;
+    }
+    .part-3{
+        width: 25%;
+    }
+    .part-4{
+        width: 19%;
+    }
+}
+
+@media screen and (max-width: 1450px){
+    .part-2 {
+        padding-left: 0px;
+    }
+    .part-4 {
+        width: 23%;
+    }
+    .part-3 {
+        width: 31%;
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .wrap-footer{
+        flex-flow: wrap;
+    }
+    .part-4 {
+        width: 100%
+    }
+    .part-2 {
+        width: 25%
+    }
+    .part-3 {
+        width: 45%;
+    }
+    .part-1 {
+        width: 19%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .part-4 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .part-2 {
+        width: 45%;
+        margin-bottom:  20px;;
+    }
+    .part-3 {
+        width: 80%;
+    }
+    .part-1 {
+        width: 19%;
+    }
+    .l-footer{
+        padding: 40px 0px 45px;;
+    }
+    .main-screen-page .wrap-map iframe{
+        height: 400px;
+    } 
+}
+
+@media screen and (max-width: 600px){
+    .part-2 {
+        width: 200px;
+        margin: 0 auto 30px;;
+    }
+    .part-3 {
+        width: 100%;
+    }
+    .part-1 {
+        width:100%;
+        text-align: center;
+        a{
+            margin: 0px auto 40px;
+            width: 102px;
+        }
+    }
+    .adres-line .heading-link{
+        font-size: 15px;
+    }
+    .adres-line .heading{
+        font-size: 14px;
+        width: 32%;;
+    }
+    .part-4 {
+        align-items: flex-start;
+    }
+    .social-ul a, .social-ul a svg, .social-ul a svg path {
+        height: 40px;
+        width: 40px;
+    }
+    .social-name {
+        font-size: 15px;
+
+      }
+      .copy-block{
+        p{
+            font-size: 14px;;
+            text-align: center;
+        }
+
+      }
+}

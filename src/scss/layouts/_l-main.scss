@@ -1,0 +1,14 @@
+@use '../helpers' as h;
+
+.l-main {
+    padding-top: 130px;;
+
+}
+
+
+.clients-slider {
+    display: flex;
+    .slide{
+        width: 120px;
+    }
+}

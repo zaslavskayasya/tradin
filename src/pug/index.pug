@@ -1,0 +1,14 @@
+extends ./helpers/layout/_layout
+
+block value
+  - const path = ".";
+  - const mainPage = true;
+
+block header
+  include components/header/_header
+
+block main
+  include components/pages/_index
+
+block footer
+  include components/footer/_footer

@@ -1,0 +1,57 @@
+$font-family:  'Circe', sans-serif;
+
+.h1{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+}
+.h2{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  margin-bottom: 30px;
+}
+.h3{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size:24px;
+  line-height: 130%;
+}
+.h4{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.normal_text, p{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 173.5%;
+  margin-bottom: 15px;;
+}
+.centered{
+  text-align: center;
+}
+
+.normal_text_bold{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 760px){
+
+}
+
+
+@media screen and (max-width: 1120px){
+   
+}
