@@ -1,24 +1,168 @@
+mixin slide(subheader, h, accent, image={"desktop": "../img/header-pick.jpg", "mobile": "../img/mobile.png"})
+    .slide.back-image(data-bg=image.desktop, data-bg-mob=image.mobile)
+        .blue-block
+        //- img.main-slider_image(src="../img/header-pick.jpg", alt="")
+        .texts-block 
+            p.subheader-text= subheader
+            h1.h1= h
+                span.accent-span= accent
+            button.button Детальніше
+            .padding-block    
+
+
+
 main.l-main
     .main-slider 
-        .slide 
-            h1.h1 Стабільне постачання газу для промислових  споживачів           
-        .slide 
-            h1.h1 Стабільне постачання газу для промислових  споживачів
-    .text-block 
-        h2.subheader text 
-        p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis officia velit porro fugiat eum ipsa maiores veritatis cumque illo, assumenda magnam ex cupiditate similique, hic animi reprehenderit consequuntur necessitatibus?   
-    .text-block 
-        h2.subheader text
-        .clients-slider 
-            .slide 
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis 
-            .slide 
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis 
-            .slide 
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis 
-            .slide 
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis 
-            .slide 
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis 
-            .slide 
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis 
+        +slide(
+            "НАФТОГАЗ  ТРЕЙДІНГ",
+            "Стабільне постачання газу для ",
+            "промислових  споживачів"
+        )
+        +slide(
+            "НАФТОГАЗ  ТРЕЙДІНГ",
+            "Стабільне постачання газу для ",
+            "релігійних та бюджетних організацій"
+        )
+        +slide(
+            "НАФТОГАЗ  ТРЕЙДІНГ",
+            "Стабільне постачання газу для ",
+            "ОСББ"
+        )
+    
+    .about
+        .container
+            h2.subheader Про нас
+            p.accent_text Ми —  надійний постачальник природного газу для непобутових споживачів по всій Україні. Створюємо клієнтоорієнтований підхід для забезпечення максимально вигідних умов співпраці.
+    
+    .clients 
+        .container
+            h2.subheader наші бізнес-клієнти
+            .clients-slider
+                .slide
+                    .slide-inner 
+                        img(src="./img/illustrate/teplo.png", alt="").slide-image  
+                        .slider-blur 
+                        .slider-names-block 
+                            p.slider-name Виробники тепла
+                            a(href="#").slider_link
+                .slide  
+                    .slide-inner 
+                        img(src="./img/illustrate/osbb.png", alt="").slide-image  
+                        .slider-blur 
+                        .slider-names-block 
+                            p.slider-name ОСББ
+                            a(href="#").slider_link
+                .slide  
+                    .slide-inner 
+                        img(src="./img/illustrate/pred.png", alt="").slide-image  
+                        .slider-blur 
+                        .slider-names-block 
+                            p.slider-name Великі підприємства
+                            a(href="#").slider_link
+                .slide  
+                    .slide-inner 
+                        img(src="./img/illustrate/budget.png", alt="").slide-image  
+                        .slider-blur 
+                        .slider-names-block 
+                            p.slider-name Бюджетні організації
+                            a(href="#").slider_link
+                .slide  
+                    .slide-inner 
+                        img(src="./img/illustrate/relig.png", alt="").slide-image  
+                        .slider-blur 
+                        .slider-names-block 
+                            p.slider-name Релігійні організації
+                            a(href="#").slider_link
+                .slide  
+                    .slide-inner 
+                        img(src="./img/illustrate/budget.png", alt="").slide-image  
+                        .slider-blur 
+                        .slider-names-block 
+                            p.slider-name Бюджетні організації
+                            a(href="#").slider_link
+    .icons-block 
+        .container
+            ul.icons-set 
+                li.icon-place 
+                    .icon-wrap 
+                        img(src="./img/icons/doc1.svg", alt="") 
+                    p.icon-name  Порядок укладання документів
+                li.icon-place 
+                    .icon-wrap 
+                        img(src="./img/icons/news.svg", alt="") 
+                    p.icon-name  Оголошення для клієнтів
+                li.icon-place 
+                    .icon-wrap 
+                        img(src="./img/icons/doc2.svg", alt="") 
+                    p.icon-name 
+                        | Зразки
+                        br
+                        | договорів
+
+
+                li.icon-place 
+                    .icon-wrap 
+                        img(src="./img/icons/justice.svg", alt="") 
+                    p.icon-name  Права та обов’язки сторін
+.white-block.main-news 
+        .news-wrap 
+            .names
+                h2.subheader НОВИНИ ТА ОГОЛОШЕННЯ
+                p.sub-subheader Актуальні новини та оголошення  для клієнтів
+            .news-slider 
+                .slide 
+                    .slide-into 
+                        .image-part 
+                            img(src="./img/illustrate/business.jpg", alt="")
+                        .news-name-wrap    
+                            a(href="#").news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
+                            a(href="#").arrow  
+                .slide 
+                    .slide-into 
+                        .image-part 
+                            img(src="./img/illustrate/business.jpg", alt="")
+                        .news-name-wrap    
+                            a(href="#").news-short Укладення 2 договорів на постачання г
+                            a(href="#").arrow 
+                .slide 
+                    .slide-into 
+                        .image-part 
+                            img(src="./img/illustrate/business.jpg", alt="")
+                        .news-name-wrap    
+                            a(href="#").news-short Укладення договорів на постачання газу для вироу      
+                            a(href="#").arrow 
+                .slide 
+                    .slide-into 
+                        .image-part 
+                            img(src="./img/illustrate/business.jpg", alt="")
+                        .news-name-wrap    
+                            a(href="#").news-short Укладення договорів на постачання газу для виробників  сезон 2024 року      
+                            a(href="#").arrow 
+                .slide 
+                    .slide-into 
+                        .image-part 
+                            img(src="./img/illustrate/business.jpg", alt="")
+                        .news-name-wrap    
+                            a(href="#").news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
+                            a(href="#").arrow  
+                .slide 
+                    .slide-into 
+                        .image-part 
+                            img(src="./img/illustrate/business.jpg", alt="")
+                        .news-name-wrap    
+                            a(href="#").news-short Укладення 2 договорів на постачання г
+                            a(href="#").arrow 
+                .slide 
+                    .slide-into 
+                        .image-part 
+                            img(src="./img/illustrate/business.jpg", alt="")
+                        .news-name-wrap    
+                            a(href="#").news-short Укладення договорів на постачання газу для вироу      
+                            a(href="#").arrow 
+                .slide 
+                    .slide-into 
+                        .image-part 
+                            img(src="./img/illustrate/business.jpg", alt="")
+                        .news-name-wrap    
+                            a(href="#").news-short Укладення договорів на постачання газу для виробників  сезон 2024 року      
+                            a(href="#").arrow 

@@ -21,20 +21,61 @@ openMenuBtn.addEventListener('click', ()=>{
 
 
 
+// let dropdownTriggers = document.querySelectorAll('.dropup');
+
+// dropdownTriggers.forEach((item, e)=>{
+//     item.addEventListener('click', (e)=>{
+//         // console.log(item);
+        
+//         if(item.classList.contains("open")){
+//             item.classList.remove("open");
+//         } else {
+//             item.classList.add("open");
+//         }
+
+//     })
+// });
+
 let dropdownTriggers = document.querySelectorAll('.dropup');
 
-dropdownTriggers.forEach((item, e)=>{
-    item.addEventListener('click', (e)=>{
-        // console.log(item);
-        
-        if(item.classList.contains("open")){
-            item.classList.remove("open");
-        } else {
-            item.classList.add("open");
-        }
+function toggleDropdowns() {
+    // Check screen width
+    if (window.innerWidth < 760) {
+        dropdownTriggers.forEach((item) => {
+            // If the event listener is not already added, add it
+            if (!item.classList.contains('listener-added')) {
+                item.addEventListener('click', toggleDropdown);
+                item.classList.add('listener-added');
+            }
+        });
+    } else {
+        // Remove event listeners if screen width is greater than or equal to 760px
+        dropdownTriggers.forEach((item) => {
+            if (item.classList.contains('listener-added')) {
+                item.removeEventListener('click', toggleDropdown);
+                item.classList.remove('listener-added');
+            }
+        });
+    }
+}
 
-    })
-});
+function toggleDropdown(e) {
+    let item = e.currentTarget;
+    if (item.classList.contains("open")) {
+        item.classList.remove("open");
+    } else {
+        item.classList.add("open");
+    }
+}
+
+// Initial load
+toggleDropdowns();
+
+// Handle window resize
+window.addEventListener('resize', toggleDropdowns);
+
+
+
 
 let lastScrollTop = 0;
 let header = document.querySelector('.header');

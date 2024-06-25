@@ -14,7 +14,9 @@ const serveTask = (done) => {
     server: {
       baseDir: './dist'
     },
-    port: 3000,
+    listen: "0.0.0.0",
+    port: 80,
+    https: false,
     open: false,
     notify: false
   });

@@ -28,13 +28,13 @@
     <link href="./../plugins/slick-1.8.1/slick/slick.css" type="text/css" rel="stylesheet">
     <link href="./../plugins/slick-1.8.1/slick/slick-theme.css" type="text/css" rel="stylesheet">
     <script src="./js/header.js" defer></script>
-    <script src="./js/./../plugins/jquery/jquery.slim.min.js" defer></script>
+    <script src="./js/./../plugins/jquery/jquery.min.js" defer></script>
     <script src="./js/./../plugins/slick-1.8.1/slick/slick.js" defer></script>
     <script src="./js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <div class="logo-place"><a class="logo" href="index.html"><img src="./../img/naftogaz-logo.svg" alt=""></a></div>
+      <div class="logo-place"><a class="logo" href="index.html"><img src="../img/naftogaz-logo.svg" alt=""></a></div>
       <div class="menu-block">
         <div class="menu-button" id="nav-icon"><span></span><span></span><span></span></div>
         <ul class="header-menu">
@@ -49,48 +49,225 @@
               <li> <a href="#">Для ТКЕ</a></li>
             </ul>
           </li>
-          <li class="header-menu_item"> <a class="header-menu_link" href="#">Новини</a></li>
           <li class="header-menu_item"> <a class="header-menu_link" href="#">Закупівлі</a></li>
+          <li class="header-menu_item"> <a class="header-menu_link" href="#">Новини</a></li>
           <li class="header-menu_item"> <a class="header-menu_link" href="#">Контакти</a></li>
         </ul>
       </div>
     </header>
     <main class="l-main">
       <div class="main-slider">
-        <div class="slide">
-          <h1 class="h1">Стабільне постачання газу для промислових споживачів </h1>
+        <div class="slide back-image" data-bg="../img/header-pick.jpg" data-bg-mob="../img/mobile.png">
+          <div class="blue-block"></div>
+          <div class="texts-block">
+            <p class="subheader-text">НАФТОГАЗ ТРЕЙДІНГ</p>
+            <h1 class="h1">Стабільне постачання газу для <span class="accent-span">промислових споживачів</span></h1>
+            <button class="button">Детальніше</button>
+            <div class="padding-block"> </div>
+          </div>
         </div>
-        <div class="slide">
-          <h1 class="h1">Стабільне постачання газу для промислових споживачів</h1>
+        <div class="slide back-image" data-bg="../img/header-pick.jpg" data-bg-mob="../img/mobile.png">
+          <div class="blue-block"></div>
+          <div class="texts-block">
+            <p class="subheader-text">НАФТОГАЗ ТРЕЙДІНГ</p>
+            <h1 class="h1">Стабільне постачання газу для <span class="accent-span">релігійних та бюджетних організацій</span></h1>
+            <button class="button">Детальніше</button>
+            <div class="padding-block"> </div>
+          </div>
+        </div>
+        <div class="slide back-image" data-bg="../img/header-pick.jpg" data-bg-mob="../img/mobile.png">
+          <div class="blue-block"></div>
+          <div class="texts-block">
+            <p class="subheader-text">НАФТОГАЗ ТРЕЙДІНГ</p>
+            <h1 class="h1">Стабільне постачання газу для <span class="accent-span">ОСББ</span></h1>
+            <button class="button">Детальніше</button>
+            <div class="padding-block"> </div>
+          </div>
         </div>
       </div>
-      <div class="text-block">
-        <h2 class="subheader">text </h2>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis officia velit porro fugiat eum ipsa maiores veritatis cumque illo, assumenda magnam ex cupiditate similique, hic animi reprehenderit consequuntur necessitatibus? </p>
+      <div class="about">
+        <div class="container">
+          <h2 class="subheader">Про нас</h2>
+          <p class="accent_text">Ми — надійний постачальник природного газу для непобутових споживачів по всій Україні. Створюємо клієнтоорієнтований підхід для забезпечення максимально вигідних умов співпраці.</p>
+        </div>
       </div>
-      <div class="text-block">
-        <h2 class="subheader">text</h2>
-        <div class="clients-slider">
-          <div class="slide">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis </p>
+      <div class="clients">
+        <div class="container">
+          <h2 class="subheader">наші бізнес-клієнти</h2>
+          <div class="clients-slider">
+            <div class="slide">
+              <div class="slide-inner"> <img class="slide-image" src="./img/illustrate/teplo.png" alt="">
+                <div class="slider-blur"> </div>
+                <div class="slider-names-block">
+                  <p class="slider-name">Виробники тепла</p><a class="slider_link" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-inner"> <img class="slide-image" src="./img/illustrate/osbb.png" alt="">
+                <div class="slider-blur"> </div>
+                <div class="slider-names-block">
+                  <p class="slider-name">ОСББ</p><a class="slider_link" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-inner"> <img class="slide-image" src="./img/illustrate/pred.png" alt="">
+                <div class="slider-blur"> </div>
+                <div class="slider-names-block">
+                  <p class="slider-name">Великі підприємства</p><a class="slider_link" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-inner"> <img class="slide-image" src="./img/illustrate/budget.png" alt="">
+                <div class="slider-blur"> </div>
+                <div class="slider-names-block">
+                  <p class="slider-name">Бюджетні організації</p><a class="slider_link" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-inner"> <img class="slide-image" src="./img/illustrate/relig.png" alt="">
+                <div class="slider-blur"> </div>
+                <div class="slider-names-block">
+                  <p class="slider-name">Релігійні організації</p><a class="slider_link" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-inner"> <img class="slide-image" src="./img/illustrate/budget.png" alt="">
+                <div class="slider-blur"> </div>
+                <div class="slider-names-block">
+                  <p class="slider-name">Бюджетні організації</p><a class="slider_link" href="#"></a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="slide">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis </p>
-          </div>
-          <div class="slide">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis </p>
-          </div>
-          <div class="slide">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis </p>
-          </div>
-          <div class="slide">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis </p>
-          </div>
-          <div class="slide">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quis </p>
-          </div>
+        </div>
+      </div>
+      <div class="icons-block">
+        <div class="container">
+          <ul class="icons-set">
+            <li class="icon-place">
+              <div class="icon-wrap"> <img src="./img/icons/doc1.svg" alt=""></div>
+              <p class="icon-name"> Порядок укладання документів</p>
+            </li>
+            <li class="icon-place">
+              <div class="icon-wrap"> <img src="./img/icons/news.svg" alt=""></div>
+              <p class="icon-name"> Оголошення для клієнтів</p>
+            </li>
+            <li class="icon-place">
+              <div class="icon-wrap"> <img src="./img/icons/doc2.svg" alt=""></div>
+              <p class="icon-name"> Зразки<br>договорів</p>
+            </li>
+            <li class="icon-place">
+              <div class="icon-wrap"> <img src="./img/icons/justice.svg" alt=""></div>
+              <p class="icon-name"> Права та обов’язки сторін</p>
+            </li>
+          </ul>
         </div>
       </div>
     </main>
+    <div class="white-block main-news">
+      <div class="news-wrap">
+        <div class="names">
+          <h2 class="subheader">НОВИНИ ТА ОГОЛОШЕННЯ</h2>
+          <p class="sub-subheader">Актуальні новини та оголошення для клієнтів</p>
+        </div>
+        <div class="news-slider">
+          <div class="slide">
+            <div class="slide-into">
+              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
+              <div class="news-name-wrap"> <a class="news-short" href="#">Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року </a><a class="arrow" href="#"> </a></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-into">
+              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
+              <div class="news-name-wrap"> <a class="news-short" href="#">Укладення 2 договорів на постачання г</a><a class="arrow" href="#"> </a></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-into">
+              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
+              <div class="news-name-wrap"> <a class="news-short" href="#">Укладення договорів на постачання газу для вироу </a><a class="arrow" href="#"> </a></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-into">
+              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
+              <div class="news-name-wrap"> <a class="news-short" href="#">Укладення договорів на постачання газу для виробників сезон 2024 року </a><a class="arrow" href="#"> </a></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-into">
+              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
+              <div class="news-name-wrap"> <a class="news-short" href="#">Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року </a><a class="arrow" href="#"> </a></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-into">
+              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
+              <div class="news-name-wrap"> <a class="news-short" href="#">Укладення 2 договорів на постачання г</a><a class="arrow" href="#"> </a></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-into">
+              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
+              <div class="news-name-wrap"> <a class="news-short" href="#">Укладення договорів на постачання газу для вироу </a><a class="arrow" href="#"> </a></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-into">
+              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
+              <div class="news-name-wrap"> <a class="news-short" href="#">Укладення договорів на постачання газу для виробників сезон 2024 року </a><a class="arrow" href="#"> </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-wrap">
+        <div class="footer-container">
+          <div class="links-block">
+            <p class="links-header">Про компанію</p>
+            <ul class="links-list">
+              <li class="links_li"> <a class="links_a" href="#">Історія</a></li>
+              <li class="links_li"> <a class="links_a" href="#">Мета та переваги</a></li>
+              <li class="links_li"> <a class="links_a" href="#">Торгівельні платформи</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <p class="links-header">Документи</p>
+            <ul class="links-list">
+              <li class="links_li"> <a class="links_a" href="#">Нормативні документи</a></li>
+              <li class="links_li"> <a class="links_a" href="#">Способи вирішення спорів</a></li>
+              <li class="links_li"> <a class="links_a" href="#">Порядок укладання договору</a></li>
+              <li class="links_li"> <a class="links_a" href="#">Зразки договорів</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <p class="links-header">Новини</p>
+            <ul class="links-list">
+              <li class="links_li"> <a class="links_a" href="#">Оголошення для діючих клієнтів</a></li>
+              <li class="links_li"> <a class="links_a" href="#">Ціна газу</a></li>
+              <li class="links_li"> <a class="links_a" href="#">Новини групи Нафтогаз</a></li>
+            </ul>
+          </div>
+          <div class="links-block contacts-part">
+            <p class="links-header">Контакти</p>
+            <ul class="links-list">
+              <li class="links_li contacts-li"> <img class="contacts-img" src="./img/icons/mail-white.svg" alt=""><a class="links_a" href="mailto:ngt@naftogaztrading.com.ua">ngt@naftogaztrading.com.ua </a></li>
+              <li class="links_li contacts-li"> <img class="contacts-img" src="./img/icons/local-white.svg" alt=""><a class="links_a" href="https://maps.app.goo.gl/7rjgAHsNDMLR2vER7">м. Київ, вул. Шолуденка, будинок 1</a></li>
+              <li class="links_li contacts-li"> <img class="contacts-img" src="./img/icons/phone-white.svg" alt=""><a class="links_a" href="phone:+380443647654">(044)364-76-54 (Канцелярія)</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy-block">
+          <p class="copy">Всі матеріали на цьому сайті розміщені на умовах ліцензії  Creative Commons Attribution 4.0 International» Copyright © 2018 - 2024 Газопостачальна компанія «Нафтогаз Трейдинг»</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

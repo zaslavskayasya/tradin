@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 29px 22px;
+  padding: 25px 25px 3px 25px;
   position: fixed;
   margin-bottom: 7px;
   background-color: #FFF;
@@ -119,7 +119,7 @@
 
 .header-menu{
     position: absolute;
-    top: 75px; 
+    top: 69px; 
     left: 0px;
     width: 100%;
     transform: translateX(-100%);
@@ -135,10 +135,10 @@
         &.has_childrens:after{
             content: "";
             position: absolute;
-            right: -10px;
-            width: 40px;
             height: 20px;
+            right: 10px;
             top: 18px;
+            width: 21px;
             background-repeat: no-repeat;
             background-size: contain;
             background-image: url('data:image/svg+xml,<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM19.7071 8.70711C20.0976 8.31658 20.0976 7.68342 19.7071 7.29289L13.3431 0.928932C12.9526 0.538408 12.3195 0.538408 11.9289 0.928932C11.5384 1.31946 11.5384 1.95262 11.9289 2.34315L17.5858 8L11.9289 13.6569C11.5384 14.0474 11.5384 14.6805 11.9289 15.0711C12.3195 15.4616 12.9526 15.4616 13.3431 15.0711L19.7071 8.70711ZM1 9H19V7H1V9Z" fill="%23303030"/></svg>'); 
@@ -176,6 +176,10 @@
     padding-top:8px;
     li{
         padding: 8px 0px;
+        a{
+            font-family: h.$font-family;
+            font-size: 18px;
+        }
         &.active a{
             color: h.$accent-color;
         }
@@ -218,9 +222,16 @@
       }
   }
 
+
+
+  
+
   @media screen and (min-width: 760px){
     .menu-button{
         display: none;;
+    }
+    .header{
+        padding: 18px 25px 18px;
     }
     .header-menu{
         position: relative;
@@ -232,7 +243,55 @@
         background-color: #FFF;
         z-index: 1; padding: 0px 15px;
         display: flex;
+        &_item{
+            margin-right: 10px;
+            border-top: none;
+        }
+        &_item.has_childrens:after{
+            display: none;
+        }
+        &_link{
+            font-size: 13px;
+        }
     }
-  }
+    .has_childrens:hover{
+         .sub-menu {
+            display: block;
+            position: absolute;
+            width: 347px;
+            background-color: #fff;
+            padding: 20px;
+        }
 
+    }
+
+}
+
+@media screen and (min-width: 1100px){
+    .header-menu{
+        &_item{
+            margin-right: 20px;
+        }
+        &_link{
+            font-size: 14px;
+
+        }
+    }
+}
   
+@media screen and (min-width: 1600px){
+    .header-menu{
+        &_item{
+            margin-right: 84px;
+        }
+        &_link{
+            font-size: 15px;
+        }
+    }
+    .logo-place {
+        width: 204px;
+    }
+    .header {
+        padding: 29px 0px 22px 103px;
+    }
+}

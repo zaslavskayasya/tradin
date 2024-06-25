@@ -1,3 +1,4 @@
+
 $font-family:  'Circe', sans-serif;
 
 .h1{
@@ -5,7 +6,8 @@ $font-family:  'Circe', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 46px;
-  line-height: 130%;
+  line-height: 108%;
+  color: #fff;
 }
 .h2{
   font-family: inherit;
@@ -27,12 +29,21 @@ $font-family:  'Circe', sans-serif;
   font-size: 20px;
   line-height: 24px;
 }
+
 .normal_text, p{
   font-family: inherit;
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 173.5%;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  margin-bottom: 15px;;
+}
+.accent_text{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
   margin-bottom: 15px;;
 }
 .centered{
@@ -44,8 +55,13 @@ $font-family:  'Circe', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 150%; 
 }
+
+.accent-span{
+  color: #12A1DC;
+}
+
 
 @media screen and (max-width: 760px){
 
