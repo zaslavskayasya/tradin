@@ -277,6 +277,10 @@
 
         }
     }
+    .header-menu_item:not(:last-child) {
+        margin-right: 44px;
+    }
+
 }
   
 @media screen and (min-width: 1600px){
