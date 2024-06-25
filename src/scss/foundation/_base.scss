@@ -36,7 +36,12 @@ body {
 
 @media screen and(min-width: 1600px){
   .container{
-    max-width: 1528;;
+    max-width: 1528px;
   }
 }
 
+@media screen and(min-width: 1700px){
+  .container{
+    max-width: 1610px;
+  }
+}
