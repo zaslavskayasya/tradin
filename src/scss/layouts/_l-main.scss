@@ -147,6 +147,7 @@
     .subheader {
         font-size: 27px;
         margin-bottom: 54px;
+        font-family: 'Montserrat';
     }
     .clients .subheader{
         margin-bottom: 66px;
@@ -319,7 +320,8 @@
 }
 
 .subheader {
-    font-family: h.$font-family;
+    // font-family: h.$font-family;
+    font-family: 'Montserrat';
     color: h.$accent-color;
     font-size: 17px;
     text-align: center;
@@ -738,7 +740,7 @@
 
 @media screen and (min-width: 1460px) {
     .main-slider .texts-block {
-        width: 1174px;
+        width: 1202px;
     }
     .main-slider .texts-block {
         padding-top: 170px;
@@ -751,6 +753,7 @@
     .main-slider .h1 {
         font-size: 82px;
         margin-bottom: 97px;
+        letter-spacing: -0.9px;
     }
 }
 

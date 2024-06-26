@@ -258,11 +258,15 @@
          .sub-menu {
             display: block;
             position: absolute;
-            width: 347px;
-            background-color: #fff;
+            // width: 347px;
+            width: max-content;
+            background-color: #FBFBFB;
             padding: 20px;
             border-radius: 30px;
-            border: 1px solid #E4E4E4;
+            position: absolute;
+            right: 0px;
+            padding: 20px 30px 20px;
+            // border: 1px solid #E4E4E4;
         }
 
     }
@@ -314,7 +318,8 @@
         display: block;
         padding: 20px;
         position: absolute;
-        width: 458px;
+        // width: 458px;
+        width: max-content;
         padding: 28px 60px 40px 61px;
     }
     .sub-menu li {
