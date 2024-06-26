@@ -14,19 +14,19 @@ mixin slide(subheader, h, accent, image={"desktop": "./img/header-pick.jpg", "mo
 main.l-main
     .main-slider 
         +slide(
-            "НАФТОГАЗ  ТРЕЙДІНГ",
+            "НАФТОГАЗ   ТРЕЙДІНГ",
             "Стабільне постачання газу для ",
             "промислових  споживачів",
             {"desktop": "./img/header-pick.jpg", "mobile": "./img/mobile.png"}
         )
         +slide(
-            "НАФТОГАЗ  ТРЕЙДІНГ",
+            "НАФТОГАЗ   ТРЕЙДІНГ",
             "Стабільне постачання газу для ",
             "релігійних  організацій",
             {"desktop": "./img/illustrate/slider2.jpg", "mobile": "./img/illustrate/slider2mob.jpg"}
         )
         +slide(
-            "НАФТОГАЗ  ТРЕЙДІНГ",
+            "НАФТОГАЗ   ТРЕЙДІНГ",
             "Стабільне постачання газу для ",
             "промислових  споживачів",
             {"desktop": "./img/header-pick.jpg", "mobile": "./img/mobile.png"}
@@ -42,62 +42,62 @@ main.l-main
             h2.subheader наші бізнес-клієнти
             .clients-slider
                 .slide
-                    .slide-inner 
+                    a(href="#").slide-inner 
                         img(src="./img/illustrate/teplo.png", alt="").slide-image  
                         .slider-blur 
                         .slider-names-block 
                             p.slider-name Виробники тепла
-                            a(href="#").slider_link
+                            .slider_link
                 .slide  
-                    .slide-inner 
+                    a(href="#").slide-inner 
                         img(src="./img/illustrate/osbb.png", alt="").slide-image  
                         .slider-blur 
                         .slider-names-block 
                             p.slider-name ОСББ
-                            a(href="#").slider_link
+                            .slider_link
                 .slide  
-                    .slide-inner 
+                    a(href="#").slide-inner 
                         img(src="./img/illustrate/pred.png", alt="").slide-image  
                         .slider-blur 
                         .slider-names-block 
                             p.slider-name Великі підприємства
-                            a(href="#").slider_link
+                            .slider_link
                 .slide  
-                    .slide-inner 
+                    a(href="#").slide-inner 
                         img(src="./img/illustrate/budget.png", alt="").slide-image  
                         .slider-blur 
                         .slider-names-block 
                             p.slider-name Бюджетні організації
-                            a(href="#").slider_link
+                            .slider_link
                 .slide  
-                    .slide-inner 
+                    a(href="#").slide-inner 
                         img(src="./img/illustrate/relig.png", alt="").slide-image  
                         .slider-blur 
                         .slider-names-block 
                             p.slider-name Релігійні організації
-                            a(href="#").slider_link
+                            .slider_link
     .icons-block 
         .container
             ul.icons-set 
-                li.icon-place 
+                a(href="#").icon-place 
                     .icon-wrap 
                         img(src="./img/icons/doc1.svg", alt="") 
-                    a(href="#").icon-name  Порядок укладання документів
-                li.icon-place 
+                    .icon-name  Порядок укладання документів
+                a(href="#").icon-place 
                     .icon-wrap 
                         img(src="./img/icons/news.svg", alt="") 
-                    a(href="#").icon-name  Оголошення для клієнтів
-                li.icon-place 
+                    .icon-name  Оголошення для клієнтів
+                a(href="#").icon-place 
                     .icon-wrap 
                         img(src="./img/icons/doc2.svg", alt="") 
-                    a(href="#").icon-name 
+                    .icon-name 
                         | Зразки
                         br
                         | договорів
-                li.icon-place 
+                a(href="#").icon-place 
                     .icon-wrap 
                         img(src="./img/icons/justice.svg", alt="") 
-                    a(href="#").icon-name  Права та обов’язки сторін
+                    .icon-name  Права та обов’язки сторін
 .white-block.main-news 
         .news-wrap 
             .names
@@ -105,40 +105,40 @@ main.l-main
                 p.sub-subheader Актуальні новини та оголошення  для клієнтів
             .news-slider 
                 .slide 
-                    .slide-into 
+                    a(href="#").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business.jpg", alt="")
                         .news-name-wrap    
-                            a(href="#").news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
-                            a(href="#").arrow  
+                            .news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
+                            .arrow  
                 .slide 
-                    .slide-into 
+                    a(href="#").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business2.jpg", alt="")
                         .news-name-wrap    
-                            a(href="#").news-short Уряд продовжив дію спеціальних обов’язків, покладених на Нафтогаз Трейдинг щодо постачання газу виробникам тепла
-                            a(href="#").arrow 
+                            .news-short Уряд продовжив дію спеціальних обов’язків, покладених на Нафтогаз Трейдинг щодо постачання газу виробникам тепла
+                            .arrow 
                 .slide 
-                    .slide-into 
+                    a(href="#").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business3.jpg", alt="")
                         .news-name-wrap    
-                            a(href="#").news-short До уваги підприємств постачальників тепла (теплокомуненерго)!
-                            a(href="#").arrow 
+                            .news-short До уваги підприємств постачальників тепла (теплокомуненерго)!
+                            .arrow 
                 .slide 
-                    .slide-into 
+                    a(href="#").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business2.jpg", alt="")
                         .news-name-wrap    
-                            a(href="#").news-short Укладення договорів на постачання газу для виробників  сезон 2024 року      
-                            a(href="#").arrow 
+                            .news-short Укладення договорів на постачання газу для виробників  сезон 2024 року      
+                            .arrow 
                 .slide 
-                    .slide-into 
+                    a(href="#").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business3.jpg", alt="")
                         .news-name-wrap    
-                            a(href="#").news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
-                            a(href="#").arrow  
+                            .news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
+                            .arrow  
 
 .advantages-block 
     .container 

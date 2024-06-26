@@ -22,6 +22,7 @@
         overflow: hidden;
         overflow: hidden;
         position: relative;
+        display: block;
         &:hover{
             .slider-names-block{
                 bottom: 34px;
@@ -31,15 +32,18 @@
                 position: absolute;
                 background: linear-gradient(#00a5ec78, #052a3a);
             }
+            .slide-image{
+                transform: scale(1.1);
+            }
 
         }
     }
     .slide-image{
         width: 100%;
         object-fit: cover;
+        transition: all ease 0.3s;
     }
     .slider-blur {
-        position: absolute;
         position: absolute;
         background: linear-gradient(#00a5ec00, #00587e);
         height: 100%;
@@ -83,7 +87,7 @@
         margin: 0;
         list-style: none;
         text-align: center;
-        // transition: opacity .1s ease;
+        transition: opacity .1s ease;
     }
     .slick-dots li {
         width: 10px;
@@ -250,6 +254,8 @@
     .slick-dots {
         position: absolute;
         left: 0;
+        left: 50%;
+        transform: translateX(-51%);
         // top: 100%;
         opacity: 0;
         width: 100%;
@@ -421,8 +427,9 @@
 }
 
 .news-slider{
+    .slick-list {margin: 0 -5px;}
+    .slick-slide>div {padding: 0 5px;}
     .slick-dots {       
-
         width: 100%;
         padding: 0;
         margin: 0;
@@ -446,6 +453,17 @@
 
         &.slick-active button:before {
             color: h.$accent-color;
+        }
+    }
+    .slide-into{
+        display: block;
+    }
+    .image-part img{
+        transition: all ease 0.3s;
+    }
+    .slide-into:hover{
+        .image-part img{
+            transform: scale(1.1);
         }
     }
 }
@@ -506,14 +524,14 @@
             transition: all ease 0.3s;
 
         }
+    }
+    .slide-into{
         &:hover{
-            .arrow{
+            .news-name-wrap .arrow{
                 filter: grayscale(0)
             }
-            .news-short{
-                color: h.$accent-color;
-            }
         }
+        
     }
     .news-slider .slick-dots {
         -webkit-transform: translate(-806px, -119px);
@@ -560,7 +578,10 @@
         }
     }
     .news-slider .slick-dots {
-        transform: translate(-67%, -181px);
+        transform: translate(-65%, -181px);
+    }
+    .main-news .slick-dotted.slick-slider {
+        margin-left: 55px;
     }
 }
 
@@ -570,7 +591,10 @@
 @media screen and(min-width: 1800px){
 
     .news-slider .slick-dots {
-        transform: translate(-78%, -181px);
+        transform: translate(-73%, -181px);
+    }
+    .slide-into, .white-block .image-part {
+        width: 588px;
     }
 }
 
@@ -776,7 +800,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid rgb(255 255 255 / 75%);
         padding-top: 30px;
         padding-bottom: 20px;
         .advant-text{
@@ -834,6 +858,7 @@
                     width: 1px;
                     height: 100%;
                     background-color: #fff ;
+                    opacity: 0.5;
                     top:0px;
                     left: -10%;
                     border-left: 1px solid #fff;
@@ -847,6 +872,7 @@
                     background-color: #fff ;
                     top:0px;
                     right: 10%;
+                    opacity: 0.5;
                     border-left: 1px solid #fff;
 
                 }
@@ -909,12 +935,12 @@
     }
     .wrap-advantage .item:nth-child(2):before {
 
-        left: -26%;
+        left: -20%;
 
     }
     .wrap-advantage .item:nth-child(2):after {
 
-        right: -0%;
+        right: 8%;
 
     }
 
@@ -922,11 +948,19 @@
         margin-bottom: 196px;
     }
     .wrap-advantage .item {
-        width: 502px;
         min-height: 364px;
-    }
-    .wrap-advantage .item{
-     max-width: 500px;   
+        max-width: 540px;   
+        &:nth-child(1){
+            width: 490px;
+        }
+        &:nth-child(2){
+            width: 550px;
+
+        }
+        &:nth-child(3){
+            width: 490px;
+
+        }
     }
     .advantages-block .wrap-arrow {
         height: 64px;

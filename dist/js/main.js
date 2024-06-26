@@ -48,9 +48,10 @@ if (mainOffset){
         });
     } else {
         let textOffset = getOffsetLeft(mainFirstSlide.querySelector('.texts-block'));
-        mainDots.style.cssText = `bottom: 80px; left: ${textOffset}px; margin: 0; opacity: 1;`;
+        mainDots.style.cssText = `bottom: 160px; left: ${textOffset+30}px; margin: 0; opacity: 1;`;
 
         if (window.innerWidth >= 1280){
+            mainDots.style.cssText = `bottom: 80px; left: ${textOffset+30}px; margin: 0; opacity: 1;`;
             mainArrows.css({
                 "top": 270,
                 "left": `-=${getOffsetLeft(mainArrows[0])-getOffsetLeft(logo)}`,
@@ -82,9 +83,10 @@ mainSlider.on('afterChange', (slick, current) => {
         mainDots.style.cssText = `opacity: 1; bottom: 140px;`;
     } else {
         let textOffset = getOffsetLeft(mainFirstSlide.querySelector('.texts-block'));
-        mainDots.style.cssText = `top: ${mainTopSet+95}px; left: ${textOffset}px; margin: 0; opacity: 1;`;
+        mainDots.style.cssText = `bottom: 160px; left: ${textOffset+30}px; margin: 0; opacity: 1;`;
 
         if (window.innerWidth >= 1280){
+            mainDots.style.cssText = `bottom: 80px; left: ${textOffset+30}px; margin: 0; opacity: 1;`;
             mainArrows.css({
                 "opacity": 1,
                 "top": 270,
