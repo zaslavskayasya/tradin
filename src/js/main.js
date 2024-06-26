@@ -5,7 +5,9 @@ mainSlider.slick({
     arrows: true,
     infinite: true,
     slidesToShow: 1,
-    adaptiveHeight: true,
+    fade: true,
+    cssEase: 'linear'
+    // adaptiveHeight: true,
 });
 
 let logo = document.querySelector('.logo');
@@ -46,10 +48,9 @@ if (mainOffset){
         });
     } else {
         let textOffset = getOffsetLeft(mainFirstSlide.querySelector('.texts-block'));
-        mainDots.style.cssText = `top: ${mainTopSet}px; left: ${textOffset}px; margin: 0; opacity: 1;`;
+        mainDots.style.cssText = `bottom: 80px; left: ${textOffset}px; margin: 0; opacity: 1;`;
 
         if (window.innerWidth >= 1280){
-            mainDots.style.cssText = `top: ${mainTopSet+95}px; left: ${textOffset}px; margin: 0; opacity: 1;`;
             mainArrows.css({
                 "top": 270,
                 "left": `-=${getOffsetLeft(mainArrows[0])-getOffsetLeft(logo)}`,
@@ -78,7 +79,7 @@ mainSlider.on('afterChange', (slick, current) => {
             "opacity": 1,
             "top": currentSlideHeight + offsetArrows
         });
-        mainDots.style.cssText = `opacity: 1; top: ${mainTopSet}px`;
+        mainDots.style.cssText = `opacity: 1; bottom: 140px;`;
     } else {
         let textOffset = getOffsetLeft(mainFirstSlide.querySelector('.texts-block'));
         mainDots.style.cssText = `top: ${mainTopSet+95}px; left: ${textOffset}px; margin: 0; opacity: 1;`;
