@@ -50,6 +50,7 @@
     "> 1%"
   ],
   "dependencies": {
+    "animate.css": "^4.1.1",
     "lightbox2": "^2.11.4"
   }
 }
