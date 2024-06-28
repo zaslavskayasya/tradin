@@ -1,4 +1,4 @@
-const { watch, series, parallel } = require('gulp');
+const { watch, series, parallel, src, dest } = require('gulp');
 const browserSync = require('browser-sync').create('Main');
 const { pugTask } = require('./tasks/pug');
 const { scssTask } = require('./tasks/scss');
@@ -9,7 +9,7 @@ const { resetImg, resetFolder, resetMap } = require('./tasks/reset');
 
 const path = require('./tasks/path.js');
 
-const serveTask = (done) => {
+const serveTask = done => {
   browserSync.init({
     server: {
       baseDir: './dist'
@@ -23,7 +23,7 @@ const serveTask = (done) => {
   done();
 };
 
-const watchTask = (done) => {
+const watchTask = done => {
   watch(path.src.pug[0], pugTask);
   watch(path.src.scss, scssTask);
   watch(path.src.js, jsTask);
@@ -32,8 +32,13 @@ const watchTask = (done) => {
   done();
 };
 
+const copyAnimate = () => {
+  return src(['src/plugins/animation/*.*'])
+    .pipe(dest('dist/css/'));
+};
+
 exports.default = series(parallel(copyFile, pugTask, jsTask, scssTask, imgTask), serveTask, watchTask);
-exports.watch = series(serveTask, watchTask);
+exports.watch = series(copyAnimate, serveTask, watchTask);
 exports.build = series(resetFolder, parallel(copyFile, pugTask, scssTask, jsTask, imgTask), resetMap);
 exports.buildimg = imgTask;
 exports.reset = resetFolder;

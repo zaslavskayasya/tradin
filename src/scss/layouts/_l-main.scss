@@ -81,13 +81,12 @@
         //     filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(190deg) brightness(90%);
         // }
     }
-    .slick-dots {     
+    .slick-dots {
         width: 100%;
         padding: 0;
         margin: 0;
         list-style: none;
         text-align: center;
-        transition: opacity .1s ease;
     }
     .slick-dots li {
         width: 10px;
@@ -251,19 +250,18 @@
 
 
 .main-slider {
+    position: relative;
+
     .slick-dots {
         position: absolute;
-        left: 0;
         left: 50%;
         transform: translateX(-51%);
-        // top: 100%;
-        opacity: 0;
         width: 100%;
         padding: 0;
         margin: 0;
         list-style: none;
         text-align: center;
-        transition: opacity .3s ease, top .1s ease-in;
+        transition: top .1s ease-in;
     }
     .slick-dots li {
         width: 10px;
@@ -282,6 +280,11 @@
             color: h.$accent-color;
         }
     }
+    .slick-arrow {
+        position: absolute;
+        top: auto;
+        bottom: 50px;
+    }
     .slick-prev {
         left: 92px;
         z-index: 99;
@@ -293,11 +296,7 @@
     .slick-next {
         font-size: 0;
         line-height: 0;
-        position: absolute;
         z-index: 3;
-        top: 87%;
-        opacity: 0;
-        transition: opacity .3s ease, top .1s ease-out;
     }
     .slick-next:before {
         content: "";
