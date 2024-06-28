@@ -21,7 +21,7 @@ let mainText = mainSlider.querySelector('.slick-active')
 
 let mobile = {
     default: {
-        dots: '161px',
+        dots: '148px',
         arrows: '54px',
     },
     switch: {

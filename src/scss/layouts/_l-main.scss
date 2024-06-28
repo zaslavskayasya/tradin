@@ -111,6 +111,7 @@
     .clients-slider {
         justify-content: space-between;
         margin-bottom: 140px;
+        padding-top: 20px;;
         .slide{
             width: 268px;
             margin-right: 27px;
@@ -198,8 +199,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 740px;
-        // background-color: aquamarine;
-        // background-size: 1240px;
     }
     &_image{
         position: absolute;
@@ -213,14 +212,6 @@
         margin: 0 auto;
         padding-top: 91px;
         padding-bottom: 150px;
-
-        // .button{
-        //     position: fixed;
-        //     left: 50%;
-        //     transform: translateX(-50%);
-        //     z-index: 99;
-        //     bottom: 211px;
-        // }
     }   
     .subheader-text {
         font-size: 13px;
@@ -232,10 +223,10 @@
     }
     .h1 {
         text-align: center;
-        margin-bottom: 83px; // Временно поставил 50px
-        // margin-bottom: 82px;
+        margin-bottom: 83px; // Временно 50px
+
         line-height: 108%;
-        // margin-bottom: 278px;
+
     }
 }
 
@@ -255,7 +246,7 @@
     .slick-dots {
         position: absolute;
         left: 50%;
-        transform: translateX(-51%);
+        transform: translateX(-53%);
         width: 100%;
         padding: 0;
         margin: 0;
@@ -604,7 +595,7 @@
         right: 41%;
     }
     .main-slider .slick-prev {
-        left: 33%;
+        left: 30%;
     }
     .icons-set{
         justify-content: space-between;
