@@ -74,6 +74,13 @@ body{
   text-align: center;
     margin-bottom: 74px;
 }
+
+p.h2.title{
+  text-align: left;
+  color: #000;
+  margin-bottom: 24px;
+}
+
 .h3{
   font-family: inherit;
   font-style: normal;
@@ -90,14 +97,17 @@ body{
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
+  margin-bottom: 15px;;
 }
 
 p{
   color: #fff
 }
-
+.bold{
+  font-weight: 700;
+}
 .standart-text{
-  color: #636363;
+  color: #000;
 }
 
 .accent_text{

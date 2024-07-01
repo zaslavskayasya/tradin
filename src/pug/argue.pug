@@ -1,0 +1,14 @@
+extends ./helpers/layout/_layout
+
+block value
+  - const path = ".";
+  - const argue = true;
+
+block header
+  include components/header/_header
+
+block main
+  include components/pages/_argue
+
+block footer
+  include components/footer/_footer
