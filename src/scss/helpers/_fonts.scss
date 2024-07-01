@@ -72,7 +72,7 @@ body{
   font-size: 20px;
   line-height: 185%;
   text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 74px;
 }
 .h3{
   font-family: inherit;
@@ -86,18 +86,18 @@ body{
   font-size: 20px;
   line-height: 24px;
 }
-
 .standart-text, p{
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
 }
+
 p{
   color: #fff
 }
+
 .standart-text{
   color: #636363;
-
 }
 
 .accent_text{
@@ -108,6 +108,7 @@ p{
   line-height: 150%;
   margin-bottom: 15px;;
 }
+
 .centered{
   text-align: center;
 }
@@ -123,7 +124,6 @@ p{
 .accent-span{
   color: #12A1DC;
 }
-
 
 @media screen and (min-width: 760px){
     .h2{

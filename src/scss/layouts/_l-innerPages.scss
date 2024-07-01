@@ -1,7 +1,7 @@
 @use '../helpers' as h;
 
 .page{
-    padding-top: 80px;
+    padding-top: 73px;
     background-color: #F5F5F5 ;
 }
 .header-part{
@@ -12,7 +12,7 @@
     height: 158px;
     position: relative;
     z-index: 2;
-    margin-bottom: 70px;
+    margin-bottom: 58px;
     .h1{
         font-family: 'Circe';
         font-size: 29px;
@@ -42,7 +42,6 @@
 
 .card{
     &-block{
-        // margin-bottom: ;
 
     }
     &-link{
@@ -50,18 +49,18 @@
         justify-content: space-between;
         flex-direction: column;   
         background-color: #ffff;
-        border-radius: 30px;     
+        border-radius: 20px;     
         margin-bottom: 20px;
         position: relative;
         display: block;
-        padding: 39px 15px 39px 34px;
+        padding: 40px 15px 27px 34px;
     }
     &-text-block{
         .h2{
             font-weight: 400;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-align: left;
-            line-height: 110%;
+            line-height: 130%;
             display: block;
             transition: color ease 0.3s;
             cursor: pointer;
@@ -70,7 +69,7 @@
             }
         }
         .standart-text{
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
     }
     &-icon-place{
@@ -88,8 +87,7 @@
     color: h.$accent-color;
 }
 .padding-wrap{
-    padding: 84px 0px 54px;
-
+    padding: 62px 0 19px;
 }
 
 @media screen and(min-width: 760px){
@@ -114,21 +112,37 @@
         max-width: 900px;;
     }
     .header-part{
-        margin-bottom: 115px;;
+        margin-bottom: 101px;;
     }
 
 }
 
 @media screen and(min-width: 1300px){
     .page{
-        padding-top: 110px;;
+        padding-top: 119px;;
     }
     .container-main{
         max-width: 1216px;;
     }
     .header-part{
+        overflow: hidden;
         .h1{          
              font-size: 80px;
+        }
+        &:after{
+            background-image: url(../img/icons/decor-circle.svg);
+
+            content: "";
+            position: absolute;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: -145px;
+            height: 367px;
+            position: absolute;
+            right: -75px;
+            width: 433px;
+            z-index: 5;
         }
     }
     .h2{
@@ -149,11 +163,11 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 44px 55px 53px 50px ;
+        padding: 50px 54px 40px 50px;
         margin-bottom: 40px;;
     }
     .card-text-block{
-        padding-left: 64px;
+        padding-left: 56px;
         width: 91%;
     }
     .pseudo-link{
@@ -162,5 +176,15 @@
     }
     .page .icons-set {
         width: 100%;
+    }
+    .card-text-block .h2 {
+ 
+        margin-bottom: 13px;
+    }
+    .card-text-block .standart-text {
+        margin-bottom: 0px;
+    }
+    .padding-wrap {
+        padding: 132px 0 120px;
     }
 }
