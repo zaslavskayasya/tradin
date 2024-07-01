@@ -61,7 +61,13 @@
             font-weight: 400;
             margin-bottom: 20px;
             text-align: left;
-            line-height: 110%;;
+            line-height: 110%;
+            display: block;
+            transition: color ease 0.3s;
+            cursor: pointer;
+            &:hover{
+                color: h.$accent-color;
+            }
         }
         .standart-text{
             margin-bottom: 20px;
