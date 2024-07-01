@@ -34,7 +34,7 @@ let mobile = {
 
 let desktop = {
     default: {
-        dots: '80px',
+        dots: '50px',
         arrows: '54px',
     },
     switch: {
@@ -124,7 +124,7 @@ function resize(){
             bottom: mobile.default.arrows
         });
 
-    } else if (window.innerWidth >= 1280){
+    } else if (window.innerWidth >= 1020){
         let offsetTextArrows = 10;
         let offsetTextDots = 21;
         
@@ -142,7 +142,7 @@ function resize(){
     } else {
         let offsetTextArrows = 0;
         let offsetTopArrows = 10;
-        let offsetTextDots = 21;
+        let offsetTextDots = 610;
         
         mainDots.css({
             top: 'auto',
