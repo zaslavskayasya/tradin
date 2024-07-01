@@ -30,13 +30,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
-    <link href="./plugins/slick-1.8.1/slick/slick.css" type="text/css" rel="stylesheet">
-    <link href="./plugins/slick-1.8.1/slick/slick-theme.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/animate.min.css">
     <script src="./js/header.js" defer></script>
-    <script src="./plugins/jquery/jquery.min.js" defer></script>
-    <script src="./plugins/slick-1.8.1/slick/slick.js" defer></script>
-    <script src="./js/main.js" defer></script>
+    <script src="./js/head-pics.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -66,86 +61,52 @@
         </ul>
       </div>
     </header>
-    <main class="l-main">
-      <div class="main-slider">
-        <div class="slide back-image" data-bg="./img/header-pick.jpg" data-bg-mob="./img/mobile.png">
-          <div class="blue-block"></div>
-          <div class="texts-block">
-            <p class="subheader-text animate__animated">НАФТОГАЗ ТРЕЙДІНГ</p>
-            <h2 class="h1 animate__animated">Стабільне постачання газу для <span class="accent-span">промислових споживачів</span></h2>
-            <button class="button animate__animated">ДЕТАЛЬНІШЕ</button>
-            <div class="padding-block"> </div>
-          </div>
-        </div>
-        <div class="slide back-image" data-bg="./img/illustrate/slider2.jpg" data-bg-mob="./img/illustrate/slider2mob.jpg">
-          <div class="blue-block"></div>
-          <div class="texts-block">
-            <p class="subheader-text animate__animated">НАФТОГАЗ ТРЕЙДІНГ</p>
-            <h2 class="h1 animate__animated">Стабільне постачання газу для <span class="accent-span">релігійних організацій</span></h2>
-            <button class="button animate__animated">ДЕТАЛЬНІШЕ</button>
-            <div class="padding-block"> </div>
-          </div>
-        </div>
-        <div class="slide back-image" data-bg="./img/header-pick.jpg" data-bg-mob="./img/mobile.png">
-          <div class="blue-block"></div>
-          <div class="texts-block">
-            <p class="subheader-text animate__animated">НАФТОГАЗ ТРЕЙДІНГ</p>
-            <h2 class="h1 animate__animated">Стабільне постачання газу для <span class="accent-span">промислових споживачів</span></h2>
-            <button class="button animate__animated">ДЕТАЛЬНІШЕ</button>
-            <div class="padding-block"> </div>
-          </div>
-        </div>
+    <div class="page">
+      <div class="header-part" data-bg="./img/illustrate/docs-d.jpg" data-bg-mob="./img/illustrate/docs-m.jpg">
+        <div class="blue-block"></div>
+        <h1 class="h1">Нормативні документи </h1>
       </div>
-      <div class="about">
-        <div class="container">
-          <h2 class="subheader">Про нас</h2>
-          <p class="accent_text">Ми — надійний постачальник природного газу для непобутових споживачів по всій Україні. Створюємо клієнтоорієнтований підхід для забезпечення максимально вигідних умов співпраці.</p>
-        </div>
-      </div>
-      <div class="clients">
-        <div class="container">
-          <h2 class="subheader">наші бізнес-клієнти</h2>
-          <div class="clients-slider">
-            <div class="slide"><a class="slide-inner" href="#"> <img class="slide-image" src="./img/illustrate/teplo.png" alt="">
-                <div class="slider-blur"> </div>
-                <div class="slider-names-block">
-                  <p class="slider-name">Виробники тепла</p>
-                  <div class="slider_link"></div>
-                </div>
-              </a></div>
-            <div class="slide"> <a class="slide-inner" href="#"> <img class="slide-image" src="./img/illustrate/osbb.png" alt="">
-                <div class="slider-blur"> </div>
-                <div class="slider-names-block">
-                  <p class="slider-name">ОСББ</p>
-                  <div class="slider_link"></div>
-                </div>
-              </a></div>
-            <div class="slide"> <a class="slide-inner" href="#"> <img class="slide-image" src="./img/illustrate/pred.png" alt="">
-                <div class="slider-blur"> </div>
-                <div class="slider-names-block">
-                  <p class="slider-name">Великі підприємства</p>
-                  <div class="slider_link"></div>
-                </div>
-              </a></div>
-            <div class="slide"> <a class="slide-inner" href="#"> <img class="slide-image" src="./img/illustrate/budget.png" alt="">
-                <div class="slider-blur"> </div>
-                <div class="slider-names-block">
-                  <p class="slider-name">Бюджетні організації</p>
-                  <div class="slider_link"></div>
-                </div>
-              </a></div>
-            <div class="slide"> <a class="slide-inner" href="#"> <img class="slide-image" src="./img/illustrate/relig.png" alt="">
-                <div class="slider-blur"> </div>
-                <div class="slider-names-block">
-                  <p class="slider-name">Релігійні організації</p>
-                  <div class="slider_link"></div>
-                </div>
-              </a></div>
+      <div class="container-main">
+        <h2 class="h2">На цій сторінці ви можете ознайомитись з нормативними документами та законодавчою базою щодо постачання газу</h2>
+        <div class="card-block docs-warap">
+          <div class="card-link"> <a class="card-icon-place" href="#"> <img src="./img/icons/link.svg" alt="icon"></a>
+            <div class="card-text-block">
+              <p class="h2">Правила постачання природного газу</p>
+              <p class="standart-text">Постанова Національної комісії, що здійснює державне регулювання у сферах енергетики та комунальних послуг від 30.09.2015 № 2496</p>
+            </div>
+            <div class="card_load">
+              <!-- Якщо посилання - то "перейти", якщо скачування - "завантажити"--><a class="pseudo-link" href="#"> Перейти</a>
+            </div>
+          </div>
+          <div class="card-link"> <a class="card-icon-place" href="#"> <img src="./img/icons/xls.svg" alt="icon"></a>
+            <div class="card-text-block">
+              <p class="h2">Про ринок природного газу</p>
+              <p class="standart-text">Закон України від 9 квітня 2015 №329-VIII</p>
+            </div>
+            <div class="card_load">
+              <!-- Якщо посилання - то "перейти", якщо скачування - "завантажити"--><a class="pseudo-link" href="#"> Завантажити</a>
+            </div>
+          </div>
+          <div class="card-link"> <a class="card-icon-place" href="#"> <img src="./img/icons/doc.svg" alt="icon"></a>
+            <div class="card-text-block">
+              <p class="h2">Кодекс газотранспортної системи</p>
+              <p class="standart-text">Постанова Національної комісії, що здійснює державне регулювання у сферах енергетики та комунальних послуг від 30.09.2015 № 2493</p>
+            </div>
+            <div class="card_load">
+              <!-- Якщо посилання - то "перейти", якщо скачування - "завантажити"--><a class="pseudo-link" href="#"> Завантажити </a>
+            </div>
+          </div>
+          <div class="card-link"> <a class="card-icon-place" href="#"> <img src="./img/icons/pdf.svg" alt="icon"></a>
+            <div class="card-text-block">
+              <p class="h2">Порядок пооб'єктового припинення (обмеження) газопостачання споживачам, крім населення</p>
+              <p class="standart-text">Постанова Кабінета Міністрів України від 8 грудня 2006 р. № 1687</p>
+            </div>
+            <div class="card_load">
+              <!-- Якщо посилання - то "перейти", якщо скачування - "завантажити"--><a class="pseudo-link" href="#"> Завантажити</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="icons-block">
-        <div class="container">
+        <div class="padding-wrap">
           <ul class="icons-set"> <a class="icon-place" href="#">
               <div class="icon-wrap"> <img src="./img/icons/doc1.svg" alt=""></div>
               <div class="icon-name"> Порядок укладання документів</div>
@@ -159,70 +120,6 @@
               <div class="icon-wrap"> <img src="./img/icons/justice.svg" alt=""></div>
               <div class="icon-name"> Права та обов’язки сторін</div>
             </a></ul>
-        </div>
-      </div>
-    </main>
-    <div class="white-block main-news">
-      <div class="news-wrap">
-        <div class="names">
-          <h2 class="subheader">НОВИНИ ТА ОГОЛОШЕННЯ</h2>
-          <p class="sub-subheader">Актуальні новини та оголошення для клієнтів</p>
-        </div>
-        <div class="news-slider">
-          <div class="slide"> <a class="slide-into" href="#">
-              <div class="image-part"> <img src="./img/illustrate/business.jpg" alt=""></div>
-              <div class="news-name-wrap">
-                <div class="news-short">Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року </div>
-                <div class="arrow"> </div>
-              </div>
-            </a></div>
-          <div class="slide"> <a class="slide-into" href="#">
-              <div class="image-part"> <img src="./img/illustrate/business2.jpg" alt=""></div>
-              <div class="news-name-wrap">
-                <div class="news-short">Уряд продовжив дію спеціальних обов’язків, покладених на Нафтогаз Трейдинг щодо постачання газу виробникам тепла</div>
-                <div class="arrow"> </div>
-              </div>
-            </a></div>
-          <div class="slide"> <a class="slide-into" href="#">
-              <div class="image-part"> <img src="./img/illustrate/business3.jpg" alt=""></div>
-              <div class="news-name-wrap">
-                <div class="news-short">До уваги підприємств постачальників тепла (теплокомуненерго)!</div>
-                <div class="arrow"> </div>
-              </div>
-            </a></div>
-          <div class="slide"> <a class="slide-into" href="#">
-              <div class="image-part"> <img src="./img/illustrate/business2.jpg" alt=""></div>
-              <div class="news-name-wrap">
-                <div class="news-short">Укладення договорів на постачання газу для виробників сезон 2024 року </div>
-                <div class="arrow"> </div>
-              </div>
-            </a></div>
-          <div class="slide"> <a class="slide-into" href="#">
-              <div class="image-part"> <img src="./img/illustrate/business3.jpg" alt=""></div>
-              <div class="news-name-wrap">
-                <div class="news-short">Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року </div>
-                <div class="arrow"> </div>
-              </div>
-            </a></div>
-        </div>
-      </div>
-    </div>
-    <div class="advantages-block">
-      <div class="container">
-        <p class="advantage-header">Переваги роботи з нами</p>
-        <div class="wrap-advantage">
-          <div class="item">
-            <p class="advant-text"> Стабільний <br>ресурс</p>
-            <div class="wrap-arrow"> <img src="./img/icons/white-arrow.svg" alt=""></div>
-          </div>
-          <div class="item">
-            <p class="advant-text">Прозорість і відкритість торгів</p>
-            <div class="wrap-arrow"> <img src="./img/icons/white-arrow.svg" alt=""></div>
-          </div>
-          <div class="item">
-            <p class="advant-text"> Індивідуальний <br>підхід</p>
-            <div class="wrap-arrow"> <img src="./img/icons/white-arrow.svg" alt=""></div>
-          </div>
         </div>
       </div>
     </div>
