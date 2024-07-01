@@ -4,7 +4,9 @@
     background-color: #035DA2;
     color: #fff;
     padding: 83px 15px 45px;
-    // margin-top: 120px;
+    p{
+        color: #fff;
+    }
 }
 
 .links-block{
@@ -14,8 +16,8 @@
 .footer-container{
     display: flex;
     flex-direction: column; 
-
 }
+
 .links-header{
     font-family: h.$font-family;
     font-size: 24px;
@@ -76,6 +78,7 @@
         opacity: 0.5;
     }
 }
+
 
 @media screen and (min-width: 600px){
     .footer-container{
