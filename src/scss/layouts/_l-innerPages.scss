@@ -12,7 +12,7 @@
     height: 158px;
     position: relative;
     z-index: 2;
-    margin-bottom: 58px;
+    margin-bottom: 60px;
     .h1{
         font-family: 'Circe';
         font-size: 29px;
@@ -93,7 +93,86 @@
 
 .text-block{
     margin-bottom: 50px;
+    &:last-child{
+        margin-bottom: 100px;;
+    }
 }
+
+
+
+.dots-list{
+    padding-top: 14px;;
+
+    li{
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 25px;
+
+
+    }
+    li:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+
+
+        background-color: h.$accent-color;
+    }
+}
+
+
+blockquote{
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 157%;
+    text-align: center;
+    padding: 119px 15px 50px 15px ;
+    position: relative;
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width:52px;
+        height:51px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../img/icons/quote.svg);
+        // left: 0px;
+        top: 41px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.text-link{
+    transition: color ease 0.3s;
+    position: relative;
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0px;
+        bottom: 1px;
+        background-color: #000;
+        transition: width ease 0.3s;
+    }
+    // text-decoration: underline;
+    &:hover{
+        color: h.$accent-color;
+        &:after{
+            width: 0%;
+        }
+    }
+}
+
 
 
 
@@ -126,7 +205,7 @@
 
 @media screen and(min-width: 1300px){
     .page{
-        padding-top: 119px;;
+        padding-top: 98px;;
     }
     .container-main{
         max-width: 1216px;;
@@ -193,5 +272,53 @@
     }
     .padding-wrap {
         padding: 132px 0 120px;
+    }
+    .text-block{
+        padding: 0px 94px;
+    }
+    .header-part {
+        margin-bottom: 115px;
+    }
+    .text-block {
+        margin-bottom: 45px;
+    }
+    .dots-list{
+
+        margin: 14px;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+        flex-flow: wrap-reverse;
+        li{
+            width: 45%;
+            &:before{
+                top: 15px;
+            }
+        }
+    }
+    blockquote{
+        font-size: 36px;
+        max-width: 898px;
+        margin: 0 auto;
+        padding: 95px 15px 130px 50px;
+        &:before{
+            top: 29px;
+        }
+    }
+
+    .h2.light{
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 41px 0px 166px;
+    }
+
+}
+
+@media screen and(min-width: 1600px){
+    .page{
+        padding-top: 119px;
+    }
+    .text-block {
+        margin-bottom: 65px;
     }
 }
