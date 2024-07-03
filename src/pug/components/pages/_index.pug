@@ -2,7 +2,7 @@ mixin slide(subheader, h, accent, image={"desktop": "./img/header-pick.jpg", "mo
     .slide.back-image(data-bg=image.desktop, data-bg-mob=image.mobile)
         .blue-block
         //- img.main-slider_image(src="../img/header-pick.jpg", alt="")
-        .texts-block 
+        .texts-block.hide
             p.subheader-text.animate__animated= subheader
             h2.h1.animate__animated= h
                 span.accent-span= accent
@@ -108,35 +108,35 @@ main.l-main
                             img(src="./img/illustrate/business.jpg", alt="")
                         .news-name-wrap    
                             .news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
-                            .arrow  
+                        .arrow  
                 .slide 
                     a(href="#" aria-label="уряд продовжив").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business2.jpg", alt="")
                         .news-name-wrap    
                             .news-short Уряд продовжив дію спеціальних обов’язків, покладених на Нафтогаз Трейдинг щодо постачання газу виробникам тепла
-                            .arrow 
+                        .arrow 
                 .slide 
                     a(href="#" aria-label="До уваги постачальників тепла").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business3.jpg", alt="")
                         .news-name-wrap    
                             .news-short До уваги підприємств постачальників тепла (теплокомуненерго)!
-                            .arrow 
+                        .arrow 
                 .slide 
                     a(href="#" aria-label="Постачання для виробників").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business2.jpg", alt="")
                         .news-name-wrap    
                             .news-short Укладення договорів на постачання газу для виробників  сезон 2024 року      
-                            .arrow 
+                        .arrow 
                 .slide 
                     a(href="#" aria-label="Договори на постачання").slide-into 
                         .image-part 
                             img(src="./img/illustrate/business3.jpg", alt="")
                         .news-name-wrap    
                             .news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
-                            .arrow  
+                        .arrow  
 
 .advantages-block 
     .container 

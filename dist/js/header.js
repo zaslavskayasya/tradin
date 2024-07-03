@@ -1,6 +1,3 @@
-console.log('test');
-
-
 let openMenuBtn = document.querySelector('.menu-button');
 
 let headerIs = document.querySelector('.header');
@@ -107,12 +104,26 @@ window.addEventListener('scroll', function() {
 
 
 var navIcons = document.querySelectorAll('#nav-icon');
-
-    navIcons.forEach(function(icon) {
-        icon.addEventListener('click', function() {
-            this.classList.toggle('open');
-        });
+navIcons.forEach(function(icon) {
+    icon.addEventListener('click', function() {
+        this.classList.toggle('open');
     });
+});
+
+
+headerIs.querySelectorAll('.has_childrens').forEach(li => {
+    li.addEventListener('mouseenter', e => {
+        let sub = li.querySelector('.sub-menu');
+        let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
+        let width = window.innerWidth;
+        let mustOffsetRight = 80;
+        let diff = (subWidth + offsetLeft + mustOffsetRight) - width;
+
+        if (0 < diff){
+            sub.style.left = `${parseFloat(getComputedStyle(sub)['left']) - diff}px`;
+        }
+    });
+});
 
 
 // let lastScrollTop = 0;

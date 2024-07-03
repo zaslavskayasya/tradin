@@ -24,31 +24,18 @@ let mobile = {
         dots: '148px',
         arrows: '54px',
     },
-    switch: {
-        ...this.default
-    },
-    resize: {
-        ...this.default
-    },
 };
 
 let desktop = {
     default: {
-        dots: '50px',
+        dots: '250px',
         arrows: '54px',
-    },
-    switch: {
-        ...this.default
-    },
-    resize: {
-        ...this.default
     },
 };
 
 let getOffsetLeft = selector => {
     if (!selector)
         return selector
-
     if (selector.offsetLeft)
         return selector.offsetLeft;
     else if (selector && !selector.offsetLeft)
@@ -57,8 +44,7 @@ let getOffsetLeft = selector => {
 
 let getOffsetTop = selector => {
     if (!selector)
-        return selector
-    
+        return selector    
     if (selector.offsetTop)
         return selector.offsetTop;
     else if (selector && !selector.offsetTop)
@@ -99,66 +85,77 @@ function customCSS(properties){
 NodeList.prototype.css = protoCSS;
 HTMLUListElement.prototype.css = customCSS;
 
-mainFirstSlide.querySelectorAll('.animate__animated')?.forEach(
-    el => el.classList.add('animate__fadeInUp')
-);
-function resize(){
-    mainArrows = document.querySelectorAll('.slick-arrow');
-    mainDots = mainSlider.querySelector('.slick-dots');
-    mainText = mainSlider.querySelector('.slick-active')
-        ?.querySelector('.texts-block');
+setTimeout(() => {
+    mainSlider.querySelectorAll('.texts-block').forEach(el => el.classList.remove('hide'));
+    mainArrows.forEach(arrow => {
+        arrow.style.opacity = 1;
+        arrow.classList.add('animate__animated', 'animate__fadeInUp');
+    });
+    mainDots.style.opacity = 1;
+    mainDots.classList.add('animate__animated', 'animate__fadeInUp');
+    mainFirstSlide.querySelectorAll('.animate__animated')?.forEach(
+        el => el.classList.add('animate__fadeInUp')
+    );
+}, 900);
 
-    // Инициализация стрелок и точек после загрузки.
-    if (window.innerWidth < 760){
-        mainDots.style.cssText = '';
-        mainDots.css({
-            top: 'auto',
-            left: `-=${getOffsetLeft(mainText)-(mainText.querySelector('.button').innerWidth/2)}px`,
-            bottom: mobile.default.dots,
-        });
+// function resize(){
+//     mainArrows = document.querySelectorAll('.slick-arrow');
+//     mainDots = mainSlider.querySelector('.slick-dots');
+//     mainText = mainSlider.querySelector('.slick-active')
+//         ?.querySelector('.texts-block');
 
-        mainArrows.forEach(el => el.style.cssText = '');
-        mainArrows.css({
-            top: 'auto',
-            left: `-=${getOffsetLeft(mainText)-(mainText.querySelector('.button').innerWidth/2)}px`,
-            bottom: mobile.default.arrows
-        });
+//     // Инициализация стрелок и точек после загрузки.
+//     if (window.innerWidth < 760){
+//         mainDots.style.cssText = '';
+//         mainDots.css({
+//             top: 'auto',
+//             left: `-=${getOffsetLeft(mainText)-(mainText.querySelector('.button').innerWidth/2)}px`,
+//             bottom: mobile.default.dots,
+//         });
 
-    } else if (window.innerWidth >= 1020){
-        let offsetTextArrows = 10;
-        let offsetTextDots = 21;
+//         mainArrows.forEach(el => el.style.cssText = '');
+//         mainArrows.css({
+//             top: 'auto',
+//             left: `-=${getOffsetLeft(mainText)-(mainText.querySelector('.button').innerWidth/2)}px`,
+//             bottom: mobile.default.arrows
+//         });
+
+//     } else if (window.innerWidth >= 1020){
+//         let offsetTextArrows = 10;
+//         let offsetTextDots = 250;
         
-        mainDots.css({
-            top: 'auto',
-            bottom: desktop.default.dots,
-            left: `-=${getOffsetLeft(mainDots)-getOffsetLeft(mainText)-offsetTextDots}px`
-        });
+//         mainDots.css({
+//             top: 'auto',
+//             bottom: desktop.default.dots,
+//             right: `${offsetTextDots}px`,
+//             left: 'none'
+//         });
     
-        mainArrows.css({
-            top: `${getOffsetTop(mainText.querySelector('.h1')) + offsetTextArrows}px`,
-            left: `-=${getOffsetLeft(mainArrows[0])-getOffsetLeft(logo)}px`,
-            bottom: 'none',
-        });
-    } else {
-        let offsetTextArrows = 0;
-        let offsetTopArrows = 10;
-        let offsetTextDots = 610;
+//         mainArrows.css({
+//             top: `${getOffsetTop(mainText.querySelector('.h1')) + offsetTextArrows}px`,
+//             left: `-=${getOffsetLeft(mainArrows[0])-getOffsetLeft(logo)}px`,
+//             bottom: 'none',
+//         });
+//     } else {
+//         let offsetTextArrows = 0;
+//         let offsetTopArrows = 10;
+//         let offsetTextDots = 610;
         
-        mainDots.css({
-            top: 'auto',
-            bottom: desktop.default.dots,
-            left: `-=${getOffsetLeft(mainDots)-getOffsetLeft(mainText)-offsetTextDots}px`
-        });
+//         mainDots.css({
+//             top: 'auto',
+//             bottom: desktop.default.dots,
+//             left: `-=${getOffsetLeft(mainDots)-getOffsetLeft(mainText)-offsetTextDots}px`
+//         });
     
-        mainArrows.css({
-            top: 'auto',
-            bottom: `${120+offsetTopArrows}px`,
-            left: `-=${getOffsetLeft(mainArrows[0])-getOffsetLeft(mainText)-offsetTextArrows}px`,
-        });
-    }
-}
-resize();
-window.addEventListener('resize', resize);
+//         mainArrows.css({
+//             top: 'auto',
+//             bottom: `${120+offsetTopArrows}px`,
+//             left: `-=${getOffsetLeft(mainArrows[0])-getOffsetLeft(mainText)-offsetTextArrows}px`,
+//         });
+//     }
+// }
+// resize();
+// window.addEventListener('resize', resize);
 
 // Выполнение перед изменением слайда.
 mainSliderJQ.on('beforeChange', (slick, current, next) => {
@@ -168,8 +165,26 @@ mainSliderJQ.on('beforeChange', (slick, current, next) => {
     currentSelectors.forEach(el => el.classList.remove(animateName));
 });
 
+mainSliderJQ.on('swipe', (event, slick, direction) => {
+    let animateName = 'animate__fadeInUp';
+    let currentSlideIdx = slick.currentSlide;
+    let currentSlide = slick.$slides[currentSlideIdx];
+    let currentSelectors = currentSlide.querySelectorAll('.animate__animated');
+    currentSelectors.forEach(el => el.classList.add(animateName));
+});
+
+mainDots.querySelectorAll('li').forEach(dot => {
+    dot.addEventListener('click', () => {
+        let animateName = 'animate__fadeInUp';
+        let currentSlideIdx = mainSliderSlick.currentSlide;
+        let currentSlide = mainSliderSlick.$slides[currentSlideIdx];
+        let currentSelectors = currentSlide.querySelectorAll('.animate__animated');
+        currentSelectors.forEach(el => el.classList.add(animateName));
+    });
+});
+
 mainArrows.forEach(
-    arrow => arrow.addEventListener('click', event => {
+    arrow => arrow.addEventListener('click', () => {
         let animateName = 'animate__fadeInUp';
         let slick = mainSliderJQ.slick('getSlick');
         let currentSlide = slick.$slides[slick.currentSlide];
@@ -242,17 +257,13 @@ $('.news-slider').slick({
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const blocks = document.querySelectorAll('.back-image');
-    
-    blocks.forEach(block => {
-      const bgImage = block.getAttribute('data-bg');
-      const mobImage = block.getAttribute('data-bg-mob');
-
-      block.style.backgroundImage = `url(${bgImage})`;
-      if(window.innerWidth <= 760){
-        block.style.backgroundImage = `url(${mobImage})`;
-      }
-
+    document.querySelectorAll('.back-image').forEach(block => {
+    let {
+        bg: bgImage,
+        bgMob: mobImage
+    }  = block.dataset;
+    let url = `url(${window.innerWidth <= 760 ? mobImage : bgImage})`;
+    block.style.backgroundImage = url;
     });
   });
 

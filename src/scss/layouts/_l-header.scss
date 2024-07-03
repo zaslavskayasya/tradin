@@ -13,7 +13,7 @@
   margin-bottom: 7px;
   background-color: #FFF;
   transform: translateY(0%);
-  animation: slideOut 0.5s ease forwards;
+//   animation: slideOut 0.5s ease forwards;
 }
 
 // Ключова анімація для приховання шапки
@@ -132,6 +132,32 @@
         border-top: 1px solid #EAEAEA;
         position: relative;
         transition: color ease 0.3s;
+        
+        &:nth-child(1){
+            animation-delay: 1000ms;
+        }
+        
+        &:nth-child(2){
+            animation-delay: 800ms;
+        }
+        
+        &:nth-child(3){
+            animation-delay: 700ms;
+        }
+        
+        &:nth-child(4){
+
+            animation-delay: 500ms;
+        }
+        
+        &:nth-child(5){
+            animation-delay: 400ms;
+        }
+        
+        &:nth-child(6){
+            animation-delay: 10ms;
+        }
+
         &.has_childrens:after{
             content: "";
             position: absolute;
@@ -264,7 +290,8 @@
             padding: 20px;
             border-radius: 30px;
             position: absolute;
-            right: 0px;
+            right: auto;
+            left: -50px;
             padding: 20px 30px 20px;
             // border: 1px solid #E4E4E4;
         }
@@ -288,7 +315,14 @@
     }
 
 }
-  
+
+
+@media screen and(min-width: 1800px){
+    .header-menu_item:not(:last-child) {
+        margin-right: 79px;
+    }
+}
+
 @media screen and (min-width: 1600px){
     .header-menu{
         &_item{
@@ -302,8 +336,17 @@
         width: 204px;
     }
     .header {
-        padding: 29px 0px 28px 103px;
+        padding: 29px 0 22px 103px;
     }
+
+    .main-slider .texts-block {
+        padding-top: 133px;
+    }
+    .main-slider .subheader-text {
+        font-size: 24px;
+        margin-bottom: 46px;
+    }
+    
     .has_childrens:hover{
         .sub-menu {
            border-radius: 30px;
