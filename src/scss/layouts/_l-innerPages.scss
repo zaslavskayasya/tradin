@@ -19,6 +19,7 @@
         line-height: 110%;
         position: absolute;
         font-weight: 400;
+        width: 80%;
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -36,8 +37,9 @@
 }
 
 .container-main{
-    padding: 15px;
-    min-width: 300px;margin: 0 auto;
+    min-width: 300px;
+    padding: 15px 29px;
+    margin: 0 auto;
 }
 
 .card{
@@ -107,8 +109,6 @@
         position: relative;
         padding-left: 30px;
         margin-bottom: 25px;
-
-
     }
     li:before {
         content: "";
@@ -119,8 +119,6 @@
         width: 10px;
         height: 10px;
         border-radius: 100%;
-
-
         background-color: h.$accent-color;
     }
 }
@@ -181,14 +179,20 @@ blockquote{
     flex-direction: row;
     align-items: center;
     position: relative;
+    justify-content: flex-start;
     .text{
         font-weight: 300;
         width: 84%;
-        padding-right: 36px;
+        padding-right: 0px;
+        padding-left: 35px;
     }
+
     &.card-link{
-        padding: 30px 26px 36px 41px;
+        padding: 30px 26px 36px 32px;
+        margin-bottom: 00px;;
+        z-index: 5;
     }
+
   }
   
   .active, .accordion:hover {
@@ -222,40 +226,70 @@ blockquote{
     transition: all ease 0.3s;
     background-color: #000;    
   }
-  
-  .accordion.active:before {
-        transform: rotate(90deg);
-        // right: 30px;
-        // top: 36px;
+  .wrap-tab.active{
+
+      .accordion:before {
+            transform: rotate(90deg);
+            // right: 30px;
+            // top: 36px;
+      }
   }
   .accordion.active {
     .panel{
-        padding: 32px 18px 45px; 
+        // padding: 32px 18px 45px; 
+        padding: 48px 21px 0 53px;
         padding-bottom: 44px;
     }
   }
   .panel {
-    padding: 0 18px;
+
     background-color: white;
+    color: #000;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    padding: 0px 18px; 
+    transition: max-height 0.4s ease-out;
+    // padding: 48px 21px 0 53px;
+    padding: 8px 21px 0 53px;
     transform: translateY(-50px);
     border-radius: 20px;
+    z-index: -1;
+    transition: all ease 0.3s;;
+    p.standart-text{
+        color: #000;
+        font-weight: 300;
+    }
+    .dots-list li:before{
+        height: 5px;
+        width: 5px;
+        top: 11px;
+    }
+    .dots-list li {
+        margin-bottom: 15px;;
+        padding-left: 20px;
+    }
+  }
+  .wrap-tab.active{
+
+      .panel{
+          padding: 48px 21px 0 53px;
+      }
   }
 
+
+
   .tabs.cards{
-    padding: 35px 0px;
+    padding: 3px 0px;
   }
 
 
 .tabs.cards {
     counter-reset: tab-counter;
+    margin-bottom: 50px;;
 }
 
 .wrap-tab {
     counter-increment: tab-counter;
+    margin-bottom: 20px;
 }
 
 .wrap-tab .accordion.card-link .number::before {
@@ -266,9 +300,68 @@ blockquote{
     color: h.$accent-color;
 }
 
-.margin-30{
-margin-bottom: 30px;
+
+.lists-wrap {
+    counter-reset: tab-counter;
 }
+
+.list-item {
+    counter-increment: tab-counter;
+    position: relative;
+    padding-left: 20px;;
+}
+
+.lists-wrap .list-item:before {
+    content: counter(tab-counter) ". ";
+    position: absolute;
+    left: 0px;
+}
+
+.margin-30{
+    height: 30px;
+}
+
+.gray-part{
+    background-color: #F6F5F5;
+    border-radius: 20px;
+    margin-left: -38px;
+    padding: 25px 19px 25px;
+    margin-top: 32px;
+}
+.gray-title{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.panel{
+    .dots-list{
+        padding-left: 0px;
+        flex-direction: column;
+        li{
+            font-weight: 300;
+        }
+    }
+}
+.attention-head{
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px 0px 0px;
+    font-size: 24px;
+}
+
+@media screen and (min-width: 450px){ 
+        .accordion .text {
+            padding-right: 36px;
+            width: 90%;
+            font-size: 19px;
+    }
+}
+
 
 @media screen and(min-width: 760px){
     .container-main{
@@ -284,6 +377,13 @@ margin-bottom: 30px;
                 width: 100%;
             }
     }
+    .accordion .text {
+        font-size: 24px;
+    }
+    .wrap-tab .accordion.card-link .number:before {
+        font-size: 36px;
+        font-weight: 400;
+    }
 
 }
 
@@ -298,6 +398,9 @@ margin-bottom: 30px;
         padding-right: 36px;
         width: 87%;
         font-size: 30px;
+    }
+    .wrap-tab .accordion.card-link .number:before {
+        font-size: 36px;
     }
 
 }
@@ -382,7 +485,6 @@ margin-bottom: 30px;
         margin-bottom: 45px;
     }
     .dots-list{
-
         margin: 14px;
         display: flex;
         justify-content: space-between;
@@ -392,6 +494,14 @@ margin-bottom: 30px;
             width: 45%;
             &:before{
                 top: 15px;
+            }
+        }
+    }
+    .panel{
+        .dots-list{
+            flex-direction: column;
+            li{
+                width: 100%;
             }
         }
     }
@@ -408,12 +518,46 @@ margin-bottom: 30px;
     .h2.light{
         max-width: 940px;
         margin: 0 auto;
-        padding: 41px 0px 166px;
+        padding: 41px 0px 64px;
+        text-align: left;;
     }
     .accordion .text {
-            padding-right: 36px;
-            width: 87%;
-            font-size: 36px;
+        font-size: 36px;
+        padding-right: 116px;
+        width: 96%;;
+    }
+    .accordion.card-link {
+        padding: 30px 26px 36px 74px;
+    }
+    .wrap-tab .panel {
+        padding: 48px 21px 0 149px;
+    }
+    .wrap-tab.active .panel {
+        padding: 48px 21px 0 149px;
+    }
+    .wrap-tab .accordion.card-link .number:before {
+        font-size: 46px;
+    }
+    .gray-part {
+        background-color: #f6f5f5;
+        border-radius: 20px;
+        margin-left: -102px;
+        margin-top: 32px;
+        padding: 44px 41px 25ps;
+    }
+    .margin-30{
+        height: 70px;
+    }
+    .accordion:before {
+        right: 75px;
+        top: 40%;
+        top: 44px;
+
+    }
+    .accordion:after {
+        height: 1px;
+        top: 53px;
+        right: 66px;
     }
 
 }
@@ -424,5 +568,8 @@ margin-bottom: 30px;
     }
     .text-block {
         margin-bottom: 65px;
+    }
+    .wrap-tab .accordion.card-link .number:before {
+        font-size: 56px;
     }
 }

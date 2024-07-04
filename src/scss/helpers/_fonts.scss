@@ -124,6 +124,10 @@ p{
   line-height: 180%;
 }
 
+.light{
+  font-weight: 300;
+}
+
 .h2.light{
   font-weight: 300;
   color: #000;
@@ -165,29 +169,45 @@ p{
       font-size: 24px;
     }
     p.h2.title.s-20{
-      font-size: 30px;
+      font-size: 25px;
     }
 }
 
 
 @media screen and (min-width: 1024px){
   .h2{
-    font-size: 36px;
+    font-size: 30px;
   }
   .standart-text, p{
     font-size: 24px;
   }
   p.h2.title.s-24{
-    font-size: 36px;;
+    font-size: 30px;;
   }
   p.h2.title.s-20{
-    font-size: 36px;
-    margin-bottom: 38px;
+    font-size: 30px;
+    margin-bottom: 30px;
   }
   .standart-text {
     line-height: 172%;
   }
   .standart-text.big-size {
+    font-size: 30px;
+  }
+}
+
+@media screen and(min-width: 1600px){
+  .h2{
     font-size: 36px;
+  }
+  p.h2.title.s-20{
+    font-size: 36px;
+    margin-bottom: 38px;
+  }
+  .standart-text.big-size {
+    font-size: 36px;
+  }
+  p.h2.title.s-24{
+    font-size: 36px;;
   }
 }

@@ -4,7 +4,7 @@
 
 .header {
   width: 100%;
-  z-index: 3;
+  z-index: 33;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +34,7 @@
         }
     }
 }
+
 
 #nav-icon {
     width: 32px;
