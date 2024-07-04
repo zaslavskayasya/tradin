@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Circe';
   src: url('./../fonts/Circe-Bold.woff2') format('woff2'),
-      url('./../fonts/Circe-Bold.woff') format('woff'),
-      url('./../fonts/Circe-Bold.otf') format('otf');
+    url('./../fonts/Circe-Bold.woff') format('woff'),
+    url('./../fonts/Circe-Bold.otf') format('otf');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 @font-face {
   font-family: 'Circe';
   src: url('./../fonts/Circe-ExtraBold.woff2') format('woff2'),
-      url('./../fonts/Circe-ExtraBold.woff') format('woff'),
-      url('./../fonts/Circe-ExtraBold.ttf') format('truetype');
+    url('./../fonts/Circe-ExtraBold.woff') format('woff'),
+    url('./../fonts/Circe-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -21,8 +21,8 @@
 @font-face {
   font-family: 'Circe';
   src: url('./../fonts/Circe-ExtraLight.woff2') format('woff2'),
-      url('./../fonts/Circe-ExtraLight.woff') format('woff'),
-      url('./../fonts/Circe-ExtraLight.ttf') format('truetype');
+    url('./../fonts/Circe-ExtraLight.woff') format('woff'),
+    url('./../fonts/Circe-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -31,8 +31,8 @@
 @font-face {
   font-family: 'Circe';
   src: url('./../fonts/Circe-Light.woff2') format('woff2'),
-      url('./../fonts/Circe-Light.woff') format('woff'),
-      url('./../fonts/Circe-Light.ttf') format('truetype');
+    url('./../fonts/Circe-Light.woff') format('woff'),
+    url('./../fonts/Circe-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -41,8 +41,8 @@
 @font-face {
   font-family: 'Circe';
   src: url('./../fonts/Circe-Regular.woff2') format('woff2'),
-      url('./../fonts/Circe-Regular.woff') format('woff'),
-      url('./../fonts/Circe-Regular.ttf') format('truetype');
+    url('./../fonts/Circe-Regular.woff') format('woff'),
+    url('./../fonts/Circe-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -50,14 +50,14 @@
 
 
 
-$font-family:  'Circe';
+$font-family: 'Circe';
 
-body{
-  $font-family:  'Circe';
+body {
+  $font-family: 'Circe';
 }
 
 
-.h1{
+.h1 {
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
@@ -65,17 +65,18 @@ body{
   line-height: 108%;
   color: #fff;
 }
-.h2{
+
+.h2 {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 185%;
   text-align: center;
-    margin-bottom: 74px;
+  margin-bottom: 74px;
 }
 
-p.h2.title.s-24{
+p.h2.title.s-24 {
   text-align: left;
   color: #000;
   margin-bottom: 24px;
@@ -83,7 +84,7 @@ p.h2.title.s-24{
   font-size: 24px;
 }
 
-p.h2.title.s-20{
+p.h2.title.s-20 {
   text-align: left;
   color: #000;
   margin-bottom: 29px;
@@ -93,100 +94,114 @@ p.h2.title.s-20{
 }
 
 
-.h3{
+.h3 {
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
-  font-size:24px;
+  font-size: 24px;
   line-height: 130%;
 }
-.h4{
+
+.h4 {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
 }
-.standart-text, p{
+
+.standart-text,
+p {
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 15px;
-  
 }
 
-p{
+p {
   color: #fff
 }
-.bold{
+
+.bold {
   font-weight: 700;
 }
-.standart-text{
+
+.standart-text {
   color: #000;
   line-height: 180%;
 }
 
-.h2.light{
+.h2.light {
   font-weight: 300;
   color: #000;
   line-height: 152%;
-    margin-bottom: 62px;
+  margin-bottom: 62px;
 }
 
 
-.accent_text{
+.accent_text {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
-  margin-bottom: 15px;;
+  margin-bottom: 15px;
+  ;
 }
 
-.centered{
+.centered {
   text-align: center;
 }
 
-.normal_text_bold{
+.normal_text_bold {
   font-family: inherit;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 150%; 
+  line-height: 150%;
 }
 
-.accent-span{
+.accent-span {
   color: #12A1DC;
 }
 
-@media screen and (min-width: 760px){
-    .h2{
-      font-size: 25px;
-    }
-    p.h2.title.s-24{
-      font-size: 24px;
-    }
-    p.h2.title.s-20{
-      font-size: 30px;
-    }
+@media screen and (min-width: 760px) {
+  .h2 {
+    font-size: 25px;
+  }
+
+  p.h2.title.s-24 {
+    font-size: 24px;
+  }
+
+  p.h2.title.s-20 {
+    font-size: 30px;
+  }
 }
 
 
-@media screen and (min-width: 1024px){
-  .h2{
+@media screen and (min-width: 1024px) {
+  .h2 {
     font-size: 36px;
   }
-  .standart-text, p{
+
+  .standart-text,
+  p {
     font-size: 24px;
   }
-  p.h2.title.s-24{
-    font-size: 36px;;
+
+  p.h2.title.s-24 {
+    font-size: 36px;
+    ;
   }
-  p.h2.title.s-20{
+
+  p.h2.title.s-20 {
     font-size: 36px;
     margin-bottom: 38px;
   }
+
   .standart-text {
     line-height: 172%;
   }
+
   .standart-text.big-size {
     font-size: 36px;
   }

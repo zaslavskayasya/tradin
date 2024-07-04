@@ -1,5 +1,21 @@
 @use '../helpers'as h;
 
+.hide {
+    opacity: 0;
+}
+
+.sanimate {
+    opacity: 0;
+
+    &.fadeInUp {
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: unset;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+}
+
 .l-main {
     padding-top: 75px;
     background-color: #F5F5F5;
@@ -51,7 +67,6 @@
 
     .slick-dots {
         position: absolute;
-
         width: 100%;
         padding: 0;
         margin: 0;
@@ -59,6 +74,7 @@
         text-align: center;
         margin: 0 0px 180px -4px;
         transition: top .1s ease-in;
+        opacity: 0;
         animation-delay: 1.3s;
     }
 
@@ -85,6 +101,7 @@
         position: absolute;
         top: auto;
         bottom: 55px;
+        opacity: 0;
         animation-delay: 1.9s;
     }
 
@@ -182,6 +199,7 @@
         overflow: hidden;
         position: relative;
         display: block;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 
         &:hover {
             .slider-names-block {

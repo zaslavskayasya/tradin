@@ -87,39 +87,48 @@ function customCSS(properties) {
 NodeList.prototype.css = protoCSS;
 HTMLUListElement.prototype.css = customCSS;
 
-mainSliderJQ.on('beforeChange', (slick, current, next) => {
-    let animateName = 'animate__fadeInUp';
-    let currentSlide = current.$slides[next];
-    let currentSelectors = currentSlide.querySelectorAll('.animate__animated');
-    currentSelectors.forEach(el => el.classList.remove(animateName));
+let animations = document.querySelectorAll('.sanimate');
+animations.forEach(el => {
+    let {
+        delay,
+        duration,
+        timing
+    } = el.dataset;
+
+    if (delay)
+        el.style.animationDelay = delay;
+
+    if (duration)
+        el.style.animationDuration = duration;
+
+    if (timing)
+        el.style.animationTimingFunction = timing;
 });
 
-mainSliderJQ.on('swipe', (event, slick, direction) => {
-    let animateName = 'animate__fadeInUp';
+setTimeout(() => {
+    mainFirstSlide.querySelector('.hide')?.classList.remove('hide');
+    mainArrows.forEach(arrow => arrow.classList.add('sanimate', 'fadeInUp'));
+    mainDots.classList.add('sanimate', 'fadeInUp');
+    mainFirstSlide.querySelectorAll('.sanimate').forEach(
+        el => el.classList.add('fadeInUp')
+    );
+}, 400);
+
+function animateMainSlider(slick, remove = false) {
+    let animateName = 'fadeInUp';
     let currentSlideIdx = slick.currentSlide;
     let currentSlide = slick.$slides[currentSlideIdx];
-    let currentSelectors = currentSlide.querySelectorAll('.animate__animated');
-    currentSelectors.forEach(el => el.classList.add(animateName));
-});
+    let currentSelectors = currentSlide.querySelectorAll('.sanimate');
+    currentSelectors.forEach(el => !remove ? el.classList.add(animateName) : el.classList.remove(animateName));
+}
 
+mainSliderJQ.on('beforeChange', (event, slick, next) => animateMainSlider(slick, true));
+mainSliderJQ.on('swipe', (event, slick, direction) => animateMainSlider(slick));
 mainDots.querySelectorAll('li').forEach(dot => {
-    dot.addEventListener('click', () => {
-        let animateName = 'animate__fadeInUp';
-        let currentSlideIdx = mainSliderSlick.currentSlide;
-        let currentSlide = mainSliderSlick.$slides[currentSlideIdx];
-        let currentSelectors = currentSlide.querySelectorAll('.animate__animated');
-        currentSelectors.forEach(el => el.classList.add(animateName));
-    });
+    dot.addEventListener('click', () => animateMainSlider(mainSliderSlick));
 });
-
 mainArrows.forEach(
-    arrow => arrow.addEventListener('click', () => {
-        let animateName = 'animate__fadeInUp';
-        let slick = mainSliderJQ.slick('getSlick');
-        let currentSlide = slick.$slides[slick.currentSlide];
-        let currentSelectors = currentSlide.querySelectorAll('.animate__animated');
-        currentSelectors.forEach(el => el.classList.add(animateName));
-    })
+    arrow => arrow.addEventListener('click', () => animateMainSlider(mainSliderSlick))
 );
 
 $('.clients-slider').slick({
@@ -163,15 +172,14 @@ $('.news-slider').slick({
     adaptiveHeight: true,
     arrows: true,
     responsive: [{
-            breakpoint: 760,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: true,
-                centerMode: true,
-            }
-        },
-    ]
+        breakpoint: 760,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true,
+            centerMode: true,
+        }
+    }, ]
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -182,5 +190,33 @@ document.addEventListener("DOMContentLoaded", function () {
         } = block.dataset;
         let url = `url(${window.innerWidth <= 760 ? mobImage : bgImage})`;
         block.style.backgroundImage = url;
+    });
+
+    let blocks = document.querySelectorAll('.scroll.sanimate');
+    let clientsSlides = document.querySelectorAll('.clients-slider > .slide.sanimate');
+
+    clientsSlides.forEach((slide, index) => {
+        slide.style.animationDelay = `${index * 170}ms`;
+    });
+
+    let observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fadeInUp');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    blocks.forEach(block => {
+        new IntersectionObserver(observerCallback, {
+            threshold: 0.2
+        }).observe(block);
+    });
+
+    clientsSlides.forEach(block => {
+        new IntersectionObserver(observerCallback, {
+            threshold: 0.4
+        }).observe(block);
     });
 });
