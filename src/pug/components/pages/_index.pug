@@ -2,11 +2,11 @@ mixin slide(subheader, h, accent, image={"desktop": "./img/header-pick.jpg", "mo
     .slide.back-image(data-bg=image.desktop, data-bg-mob=image.mobile)
         .blue-block
         //- img.main-slider_image(src="../img/header-pick.jpg", alt="")
-        .texts-block.hide
-            p.subheader-text.animate__animated= subheader
-            h2.h1.animate__animated= h
+        .texts-block
+            p.subheader-text.wow.fadeInUp(data-wow-delay="200ms")= subheader
+            h2.h1.wow.fadeInUp(data-wow-delay="400ms")= h
                 span.accent-span= accent
-            button.button.animate__animated ДЕТАЛЬНІШЕ
+            button(data-wow-delay="600ms").button.wow.fadeInUp ДЕТАЛЬНІШЕ
             .padding-block    
 
 
