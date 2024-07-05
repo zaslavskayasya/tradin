@@ -576,6 +576,7 @@ margin: 0px 4px;
     .card-text-block{
         padding-left: 56px;
         width: 91%;
+        padding-right: 20px;
     }
     .pseudo-link{
         font-size: 24px;;
@@ -594,9 +595,9 @@ margin: 0px 4px;
     .padding-wrap {
         padding: 132px 0 120px;
     }
-    .text-block{
-        padding: 0px 94px;
-    }
+    // .text-block{
+    //     padding: 0px 94px;
+    // }
     .header-part {
         margin-bottom: 115px;
     }
@@ -712,7 +713,8 @@ margin: 0px 4px;
 }
 @media screen and(min-width: 1600px){
     .page{
-        padding-top: 119px;
+        padding-top: 113px;
+        padding-bottom: 60px;
     }
     .text-block {
         margin-bottom: 65px;
