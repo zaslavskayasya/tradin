@@ -92,6 +92,7 @@
     font-size: 20px;
     color: h.$accent-color;
 }
+
 .padding-wrap{
     padding: 62px 0 19px;
 }
@@ -577,16 +578,49 @@ margin: 0px 4px;
     }
 }
 
-
-
 .rr{
     transform: rotate(-180deg)
 }
 
-
 .wrap-intro{
     margin-bottom: 30px;;
 }
+
+.date-block{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;;
+    .calendar{
+        width: 28px;
+        height: 21px;
+        display: block;
+        background-size: cover;
+        background-repeat: repeat;
+        background-image: url(../img/icons/calendar.svg);
+        margin-right: 10px;
+    } 
+    p.date{
+        color: h.$accent-color;
+        font-family: inherit;
+        font-size: 20px;
+        margin-bottom: 0px;;
+
+    }
+}
+
+.simple-image-wrap{
+    border-radius: 20px;
+    overflow: hidden;
+    height: 285px;
+    margin: 25px 0px 56px;
+    .simple-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 56px;
+    }
+}
+
 
 
 @media screen and (min-width: 400px){
@@ -598,6 +632,7 @@ margin: 0px 4px;
         max-width: 40px;
         min-width: 40px;
     }
+
 }
 
 @media screen and(min-width: 760px){
@@ -641,8 +676,7 @@ margin: 0px 4px;
         height: 57px;
         max-width: 57px;
         min-width: 57px;
-        font-size: 28px;
-    
+        font-size: 28px;    
     }
 
     .page-pagination>.next {
@@ -676,7 +710,10 @@ margin: 0px 4px;
             margin: 0px 5px 25px;        
         }
     }
-    
+    .simple-image-wrap{
+        margin: 35px 0px 64px;
+        height: 412px;
+    }
 
 }
 
@@ -760,7 +797,7 @@ margin: 0px 4px;
     .text-block {
         margin-bottom: 45px;
     }
-    .dots-list{
+    .dots-list.flex-list{
         margin: 14px;
         display: flex;
         justify-content: space-between;
@@ -841,7 +878,17 @@ margin: 0px 4px;
     .wrap-intro{
         margin-bottom: 80px;;
     }
-
+    .date-block .calendar{
+        height: 30px;
+        width: 40px;
+        margin-right: 25px;
+    }
+    .date-block p.date{
+        font-size: 24px;;
+    }
+    .date-block{
+        margin-bottom: 51px;;
+    }
 }
 
 
@@ -857,6 +904,11 @@ margin: 0px 4px;
         top: 40%;
         top: 46px;
         height: 39px;
+    }
+     .dots-list li:before {
+        height: 10px;
+        top: 15px;
+        width: 10px;
     }
     .panel .dots-list li:before {
         height: 10px;
@@ -888,6 +940,12 @@ margin: 0px 4px;
     .news-item .arrow-place {
         height: 51px;
         width: 51px;
+    }
+    .simple-image-wrap{
+        margin-bottom: 100px;
+        height: 410px;
+        margin: 100px 0 100px;
+        // padding-top: 80px;
     }
 }
 
