@@ -6,23 +6,26 @@
 }
 .header-part{
     // min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 158px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     margin-bottom: 60px;
     .h1{
         font-family: 'Circe';
         font-size: 29px;
         line-height: 110%;
-        position: absolute;
+        position: relative;
         font-weight: 400;
         width: 80%;
-        top:50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        // top:50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
         text-align: center;
         z-index: 3;
     }
@@ -32,7 +35,7 @@
         height: 100%;
         width: 100%;
         opacity: 0.8;
-        z-index: 1;
+        z-index: 2;
     }
 }
 
