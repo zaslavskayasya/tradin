@@ -10,6 +10,18 @@
     }
 }
 
+@keyframes fadeInUp40 {
+    from {
+        opacity: 0;
+        transform: translateY(40%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fadeInLeft {
     from {
         opacity: 0;

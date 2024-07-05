@@ -8,8 +8,8 @@
     opacity: 0;
 
     &.fadeInUp {
-        animation-name: fadeInUp;
-        animation-duration: 1s;
+        animation-name: fadeInUp40;
+        animation-duration: 700ms;
         animation-delay: unset;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
@@ -312,6 +312,21 @@
         width: 143px;
         margin-bottom: 50px;
         transition: all ease 0.3s;
+        &:nth-child(1) {
+            animation-delay: 100ms;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 200ms;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 300ms;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 400ms;
+        }
 
         &:hover {
             .icon-wrap {

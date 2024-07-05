@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     blocks.forEach(block => {
         new IntersectionObserver(observerCallback, {
-            threshold: 0.2
+            threshold: 0.3
         }).observe(block);
     });
 
