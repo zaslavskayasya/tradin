@@ -201,6 +201,10 @@
         display: block;
         animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 
+        &.fadeInUp {
+            animation-name: fadeInUp40;
+        }
+
         &:hover {
             .slider-names-block {
                 bottom: 34px;
