@@ -293,6 +293,12 @@ blockquote{
 .wrap-tab {
     counter-increment: tab-counter;
     margin-bottom: 20px;
+    .icon-money{
+        width: 25px;
+        height: 25px;
+        margin-left: -4px;
+        margin-right: 4px;
+    }
 }
 
 .wrap-tab .accordion.card-link .number::before {
@@ -461,6 +467,11 @@ margin: 0px 4px;
 
 .rr{
     transform: rotate(-180deg)
+}
+
+
+.wrap-intro{
+    margin-bottom: 30px;;
 }
 
 @media screen and(min-width: 760px){
@@ -639,10 +650,12 @@ margin: 0px 4px;
     }
 
     .h2.light{
-        max-width: 940px;
+        max-width: 840px;
         margin: 0 auto;
-        padding: 41px 0px 64px;
-        text-align: left;;
+        font-size: 36px;
+        padding: 41px 0px 164px;
+        // text-align: left;;
+        line-height: 157%;;
     }
     .accordion .text {
         font-size: 36px;
@@ -664,8 +677,8 @@ margin: 0px 4px;
     .gray-part {
         background-color: #f6f5f5;
         border-radius: 20px;
-        margin-left: -102px;
-        margin-right: 27px;
+        // margin-left: -102px;
+        // margin-right: 27px;
         margin-top: 32px;
         padding: 44px 41px 25ps;
     }
@@ -683,12 +696,14 @@ margin: 0px 4px;
         top: 53px;
         right: 66px;
     }
+    .wrap-intro{
+        margin-bottom: 80px;;
+    }
 
 }
 
 
-@media screen and (min-width: 1450px)
-{
+@media screen and (min-width: 1450px){
     .accordion:after {
         height: 1px;
         right: 89px;
@@ -713,7 +728,17 @@ margin: 0px 4px;
     .gray-part {
         padding: 25px 39px;
     }
+    .wrap-tab {
+        .icon-money{
+            width: 52px;
+            height: 52px;    
+        }
+    }
+    .wrap-tab.active .panel, .wrap-tab .panel {
+        padding: 48px 91px 0 149px;
+    }
 }
+
 @media screen and(min-width: 1600px){
     .page{
         padding-top: 113px;
