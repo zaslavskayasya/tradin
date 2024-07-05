@@ -1,9 +1,8 @@
 script(src=jsPath + "header.js" defer)
 
-
 if mainPage
-  script(src="./plugins/jquery/jquery.min.js" defer)
-  script(src="./plugins/slick-1.8.1/slick/slick.js" defer)
+  script(src=plugins + "jquery/jquery.min.js" defer)
+  script(src=plugins + "slick-1.8.1/slick/slick.js" defer)
   script(src=jsPath + "main.js" defer)
 
 if documents
@@ -14,3 +13,7 @@ if argue
 if clients
   script(src=jsPath + "head-pics.js" defer)
   script(src=jsPath + "tabs.js" defer)
+
+if news
+  script(src=jsPath + "head-pics.js" defer)
+  script(src=jsPath + "news.js" defer)

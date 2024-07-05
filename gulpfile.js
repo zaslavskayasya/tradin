@@ -34,7 +34,7 @@ const watchTask = done => {
 
 const copyAnimate = () => {
   return src(['src/plugins/animation/*.*'])
-    .pipe(dest('dist/css/'));
+    .pipe(dest('dist/plugins/animation/'));
 };
 
 exports.default = series(parallel(copyFile, pugTask, jsTask, scssTask, imgTask), serveTask, watchTask);

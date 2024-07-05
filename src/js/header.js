@@ -147,3 +147,42 @@ headerIs.querySelectorAll('.has_childrens').forEach(li => {
 
 //     lastScrollTop = scrollTop;
 // });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.back-image').forEach(block => {
+        let {
+            bg: bgImage,
+            bgMob: mobImage
+        } = block.dataset;
+        let url = `url(${window.innerWidth <= 760 ? mobImage : bgImage})`;
+        block.style.backgroundImage = url;
+    });
+
+    let blocks = document.querySelectorAll('.scroll.sanimate');
+    let clientsSlides = document.querySelectorAll('.clients-slider > .slide.sanimate');
+
+    clientsSlides.forEach((slide, index) => {
+        slide.style.animationDelay = `${index * 170}ms`;
+    });
+
+    let observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fadeInUp');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    blocks.forEach(block => {
+        new IntersectionObserver(observerCallback, {
+            threshold: 0.2
+        }).observe(block);
+    });
+
+    clientsSlides.forEach(block => {
+        new IntersectionObserver(observerCallback, {
+            threshold: 0.4
+        }).observe(block);
+    });
+});

@@ -1,162 +1,141 @@
-mixin slide(subheader, h, accent, image={"desktop": "./img/header-pick.jpg", "mobile": "./img/mobile.png"})
-    .slide.back-image(data-bg=image.desktop, data-bg-mob=image.mobile)
-        .blue-block
-        //- img.main-slider_image(src="../img/header-pick.jpg", alt="")
-        .texts-block.hide
-            p.subheader-text.animate__animated= subheader
-            h2.h1.animate__animated= h
-                span.accent-span= accent
-            button.button.animate__animated ДЕТАЛЬНІШЕ
-            .padding-block    
-
-
-
 main.l-main
-    .main-slider 
+    .main-slider
+        mixin slide(subheader, h, accent, image={"desktop": "./img/header-pick.jpg", "mobile": "./img/mobile.png"})
+            .slide.back-image(data-bg=image.desktop, data-bg-mob=image.mobile)
+                .blue-block
+                //- img.main-slider_image(src="../img/header-pick.jpg" alt="")
+                .texts-block&attributes(attributes)
+                    p.subheader-text.sanimate(data-delay='200ms')= subheader
+                    h2.h1.sanimate(data-delay='400ms')= h
+                        span.accent-span= accent
+                    button.button.sanimate(data-delay='600ms') ДЕТАЛЬНІШЕ
+                    .padding-block
+
         +slide(
-            "НАФТОГАЗ   ТРЕЙДІНГ",
+            "НАФТОГАЗ ТРЕЙДІНГ",
             "Стабільне постачання газу для ",
             "промислових  споживачів"
-        )
+        )(class='hide')
         +slide(
-            "НАФТОГАЗ   ТРЕЙДІНГ",
+            "НАФТОГАЗ ТРЕЙДІНГ",
             "Стабільне постачання газу для ",
             "релігійних  організацій",
             {"desktop": "./img/illustrate/slider2.jpg", "mobile": "./img/illustrate/slider2mob.jpg"}
         )
         +slide(
-            "НАФТОГАЗ   ТРЕЙДІНГ",
+            "НАФТОГАЗ ТРЕЙДІНГ",
             "Стабільне постачання газу для ",
             "промислових  споживачів"
         )
-    
-    .about
+
+    .about.scroll.sanimate
         .container
             h2.subheader Про нас
-            p.accent_text Ми —  надійний постачальник природного газу для непобутових споживачів по всій Україні. Створюємо клієнтоорієнтований підхід для забезпечення максимально вигідних умов співпраці.
-    
-    .clients 
+            p.accent_text Ми — надійний постачальник природного газу для непобутових споживачів по всій Україні. Створюємо клієнтоорієнтований підхід для забезпечення максимально вигідних умов співпраці.
+
+    .clients.scroll.sanimate
         .container
             h2.subheader наші бізнес-клієнти
             .clients-slider
-                .slide
-                    a(href="#" aria-label="Виробники тепла").slide-inner 
-                        img(src="./img/illustrate/teplo.png", alt="").slide-image  
-                        .slider-blur 
-                        .slider-names-block 
-                            p.slider-name Виробники тепла
-                            .slider_link
-                .slide  
-                    a(href="#" aria-label="ОСББ").slide-inner 
-                        img(src="./img/illustrate/osbb.png", alt="").slide-image  
-                        .slider-blur 
-                        .slider-names-block 
-                            p.slider-name ОСББ
-                            .slider_link
-                .slide  
-                    a(href="#" aria-label="Великі підприємства").slide-inner 
-                        img(src="./img/illustrate/pred.png", alt="").slide-image  
-                        .slider-blur 
-                        .slider-names-block 
-                            p.slider-name Великі підприємства
-                            .slider_link
-                .slide  
-                    a(href="#" aria-label="Бюджетні організації" ).slide-inner 
-                        img(src="./img/illustrate/budget.png", alt="").slide-image  
-                        .slider-blur 
-                        .slider-names-block 
-                            p.slider-name Бюджетні організації
-                            .slider_link
-                .slide  
-                    a(href="#" aria-label="Релігійні організації").slide-inner 
-                        img(src="./img/illustrate/relig.png", alt="").slide-image  
-                        .slider-blur 
-                        .slider-names-block 
-                            p.slider-name Релігійні організації
-                            .slider_link
-    .icons-block 
+                mixin slide(label, img)
+                    .slide.sanimate
+                        a(href="#" aria-label=label).slide-inner 
+                            img(src=img alt="").slide-image  
+                            .slider-blur
+                            .slider-names-block 
+                                p.slider-name= label
+                                .slider_link
+
+                +slide("Виробники тепла", "./img/illustrate/teplo.png")
+                +slide("ОСББ", "./img/illustrate/osbb.png")
+                +slide("Великі підприємства", "./img/illustrate/pred.png")
+                +slide("Бюджетні організації", "./img/illustrate/budget.png")
+                +slide("Релігійні організації", "./img/illustrate/relig.png")
+
+    .icons-block.scroll.sanimate
         .container
             .icons-set 
                 a(href="#" aria-label="Порядок укладання документів").icon-place 
                     .icon-wrap 
-                        img(src="./img/icons/doc1.svg", alt="") 
-                    .icon-name  Порядок укладання документів
+                        img(src="./img/icons/doc1.svg" alt="") 
+                    .icon-name Порядок укладання документів
                 a(href="#" aria-label="оголошення").icon-place 
                     .icon-wrap 
-                        img(src="./img/icons/news.svg", alt="") 
-                    .icon-name  Оголошення для клієнтів
+                        img(src="./img/icons/news.svg" alt="") 
+                    .icon-name Оголошення для клієнтів
                 a(href="#" aria-label="Зразки договорів" ).icon-place 
                     .icon-wrap 
-                        img(src="./img/icons/doc2.svg", alt="") 
+                        img(src="./img/icons/doc2.svg" alt="") 
                     .icon-name 
                         | Зразки
                         br
                         | договорів
                 a(href="#" aria-label="Права та обовязки").icon-place 
                     .icon-wrap 
-                        img(src="./img/icons/justice.svg", alt="") 
+                        img(src="./img/icons/justice.svg" alt="") 
                     .icon-name  Права та обов’язки сторін
-.white-block.main-news 
-        .news-wrap 
-            .names
-                h2.subheader НОВИНИ ТА ОГОЛОШЕННЯ
-                p.sub-subheader Актуальні новини та оголошення  для клієнтів
-            .news-slider 
-                .slide 
-                    a(href="#" aria-label="Укладення договорів").slide-into 
-                        .image-part 
-                            img(src="./img/illustrate/business.jpg", alt="")
-                        .news-name-wrap    
-                            .news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
-                        .arrow  
-                .slide 
-                    a(href="#" aria-label="уряд продовжив").slide-into 
-                        .image-part 
-                            img(src="./img/illustrate/business2.jpg", alt="")
-                        .news-name-wrap    
-                            .news-short Уряд продовжив дію спеціальних обов’язків, покладених на Нафтогаз Трейдинг щодо постачання газу виробникам тепла
-                        .arrow 
-                .slide 
-                    a(href="#" aria-label="До уваги постачальників тепла").slide-into 
-                        .image-part 
-                            img(src="./img/illustrate/business3.jpg", alt="")
-                        .news-name-wrap    
-                            .news-short До уваги підприємств постачальників тепла (теплокомуненерго)!
-                        .arrow 
-                .slide 
-                    a(href="#" aria-label="Постачання для виробників").slide-into 
-                        .image-part 
-                            img(src="./img/illustrate/business2.jpg", alt="")
-                        .news-name-wrap    
-                            .news-short Укладення договорів на постачання газу для виробників  сезон 2024 року      
-                        .arrow 
-                .slide 
-                    a(href="#" aria-label="Договори на постачання").slide-into 
-                        .image-part 
-                            img(src="./img/illustrate/business3.jpg", alt="")
-                        .news-name-wrap    
-                            .news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
-                        .arrow  
 
-.advantages-block 
+.white-block.main-news.scroll.sanimate
+    .news-wrap 
+        .names
+            h2.subheader НОВИНИ ТА ОГОЛОШЕННЯ
+            p.sub-subheader Актуальні новини та оголошення  для клієнтів
+        .news-slider 
+            .slide 
+                a(href="#" aria-label="Укладення договорів").slide-into 
+                    .image-part 
+                        img(src="./img/illustrate/business.jpg" alt="")
+                    .news-name-wrap    
+                        .news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
+                    .arrow  
+            .slide 
+                a(href="#" aria-label="уряд продовжив").slide-into 
+                    .image-part 
+                        img(src="./img/illustrate/business2.jpg" alt="")
+                    .news-name-wrap    
+                        .news-short Уряд продовжив дію спеціальних обов’язків, покладених на Нафтогаз Трейдинг щодо постачання газу виробникам тепла
+                    .arrow 
+            .slide 
+                a(href="#" aria-label="До уваги постачальників тепла").slide-into 
+                    .image-part 
+                        img(src="./img/illustrate/business3.jpg" alt="")
+                    .news-name-wrap    
+                        .news-short До уваги підприємств постачальників тепла (теплокомуненерго)!
+                    .arrow 
+            .slide 
+                a(href="#" aria-label="Постачання для виробників").slide-into 
+                    .image-part 
+                        img(src="./img/illustrate/business2.jpg" alt="")
+                    .news-name-wrap    
+                        .news-short Укладення договорів на постачання газу для виробників  сезон 2024 року      
+                    .arrow 
+            .slide 
+                a(href="#" aria-label="Договори на постачання").slide-into 
+                    .image-part 
+                        img(src="./img/illustrate/business3.jpg" alt="")
+                    .news-name-wrap    
+                        .news-short Укладення договорів на постачання газу для виробників тепла на міжопалювальний сезон 2024 року      
+                    .arrow  
+
+.advantages-block
     .container 
-        p.advantage-header Переваги роботи з нами
+        p.advantage-header.scroll.sanimate Переваги роботи з нами
         .wrap-advantage 
-            .item 
+            .item.scroll.sanimate 
                 p.advant-text 
                     |Стабільний 
                     br
                     | ресурс
                 .wrap-arrow 
-                    img(src="./img/icons/white-arrow.svg", alt="")
-            .item 
+                    img(src="./img/icons/white-arrow.svg" alt="")
+            .item.scroll.sanimate 
                 p.advant-text Прозорість і відкритість торгів
                 .wrap-arrow 
-                    img(src="./img/icons/white-arrow.svg", alt="")
-            .item 
+                    img(src="./img/icons/white-arrow.svg" alt="")
+            .item.scroll.sanimate 
                 p.advant-text 
                     | Індивідуальний 
                     br
                     | підхід
                 .wrap-arrow 
-                    img(src="./img/icons/white-arrow.svg", alt="")
+                    img(src="./img/icons/white-arrow.svg" alt="")

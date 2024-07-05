@@ -354,7 +354,10 @@ blockquote{
     font-size: 24px;
 }
 
-@media screen and (min-width: 450px){ 
+
+
+.wrap-all-news{
+    margin-bottom: 71px;
         .accordion .text {
             padding-right: 36px;
             width: 90%;
@@ -362,10 +365,114 @@ blockquote{
     }
 }
 
+.news-item{
+    width: 100%;
+    margin-bottom: 41px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.wrap-news-illustrate{
+    width: 100%;
+    height: 218px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    .news-illustrate{
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+    }
+}
+
+.news-text{
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+    text-align: left;
+    line-height: 150%;
+}
+
+.pagination{
+    display: flex;
+    margin: 0 auto;
+    width: 270px;
+    align-items: center;
+    .arr{
+        width: 44px;
+        height: 39px;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &.arr-legt{
+            margin-right: 25px;
+        }
+        &.arr-right{
+            margin-left: 25px;
+        }
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+    .dots{
+margin: 0px 4px;
+    }
+    
+}
+.num{
+    border: 1px solid #9E9E9E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 5px;
+    width: 33px;
+    height: 33px;;
+    margin: 0px 4px;
+    font-size: 24px;
+    transition: all ease 0.3s;
+    font-weight: 700;
+    color: #9E9E9E;
+    cursor: pointer;
+    &.active{
+        color: h.$accent-color;
+
+    }
+    &:hover{
+        color: h.$accent-color;
+        border: 1px solid h.$accent-color;
+
+    }
+
+}
+
+.pagination-place{
+    margin: 0px auto 60px;
+    // margin-bottom: 30px;
+}
+
+.rr{
+    transform: rotate(-180deg)
+}
 
 @media screen and(min-width: 760px){
+    .wrap-all-news{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+        margin-bottom: 50px;
+        .news-item{
+            width: 46%;
+            margin: 0px 5px 25px;        
+        }
+    }
     .container-main{
-        max-width: 600px;;
+        max-width: 740px;;
     }
     .page .icons-set{
         width: 600px;
@@ -384,12 +491,16 @@ blockquote{
         font-size: 36px;
         font-weight: 400;
     }
+    .wrap-news-illustrate {
 
+        height: 163px;
+
+    }
 }
 
 @media screen and(min-width: 1024px){
     .container-main{
-        max-width: 900px;;
+        max-width: 990px;;
     }
     .header-part{
         margin-bottom: 101px;;
@@ -402,6 +513,14 @@ blockquote{
     .wrap-tab .accordion.card-link .number:before {
         font-size: 36px;
     }
+    .wrap-all-news{    
+        justify-content: space-between;  
+        .news-item{
+            width: 30%;
+            margin: 0px 5px 25px;        
+        }
+    }
+    
 
 }
 
@@ -542,6 +661,7 @@ blockquote{
         background-color: #f6f5f5;
         border-radius: 20px;
         margin-left: -102px;
+        margin-right: 27px;
         margin-top: 32px;
         padding: 44px 41px 25ps;
     }
@@ -562,6 +682,34 @@ blockquote{
 
 }
 
+
+@media screen and (min-width: 1450px)
+{
+    .accordion:after {
+        height: 1px;
+        right: 89px;
+        top: 65px;
+        width: 39px;
+    }
+    .accordion:before {
+        right: 109px;
+        top: 40%;
+        top: 46px;
+        height: 39px;
+    }
+    .panel .dots-list li:before {
+        height: 10px;
+        top: 15px;
+        width: 10px;
+    }
+    .panel .dots-list li {
+        margin-bottom: 20px;;
+        padding-left: 30px;
+    }
+    .gray-part {
+        padding: 25px 39px;
+    }
+}
 @media screen and(min-width: 1600px){
     .page{
         padding-top: 119px;
@@ -571,5 +719,17 @@ blockquote{
     }
     .wrap-tab .accordion.card-link .number:before {
         font-size: 56px;
+    }
+    .accordion:after {
+        height: 1px;
+        right: 99px;
+        top: 65px;
+        width: 39px;
+    }
+    .accordion:before {
+        right: 119px;
+        top: 40%;
+        top: 47px;
+        height: 39px;
     }
 }
