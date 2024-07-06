@@ -1,0 +1,16 @@
+extends ./helpers/layout/_layout
+
+block value
+  - const path = "./";
+  - const headpick = true;
+  - const factory = true;   
+
+
+block header
+  include components/header/_header
+
+block main
+  include components/pages/_factory
+
+block footer
+  include components/footer/_footer
