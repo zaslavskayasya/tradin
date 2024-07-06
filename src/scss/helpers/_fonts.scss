@@ -147,6 +147,9 @@ footer p {
 .thin{
   font-weight: 300;
 }
+a.h2.thin{
+  font-weight: 300;
+}
 
 .accent_text {
   font-family: inherit;
@@ -160,7 +163,9 @@ footer p {
 .centered {
   text-align: center;
 }
-
+.under{
+  text-decoration: underline;
+}
 .normal_text_bold {
   font-family: inherit;
   font-style: normal;
