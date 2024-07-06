@@ -195,6 +195,7 @@ blockquote{
         padding: 30px 26px 36px 32px;
         margin-bottom: 00px;;
         z-index: 5;
+        align-items: flex-start;
     }
 
   }
@@ -322,6 +323,7 @@ blockquote{
         height: 25px;
         margin-left: -4px;
         margin-right: 4px;
+        margin-top: 6px;
     }
 }
 
@@ -915,6 +917,10 @@ margin: 0px 4px;
     }
     .accordion.card-link {
         padding: 30px 26px 36px 74px;
+        .icon-money{
+            // margin-top: 12px;;
+        }
+
     }
     .wrap-tab .panel {
         padding: 48px 21px 0 149px;
