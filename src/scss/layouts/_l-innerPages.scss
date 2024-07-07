@@ -556,6 +556,7 @@ blockquote {
     text-align: center;
     vertical-align: middle;
     position: relative;
+    cursor: pointer;
 
     .arrow-place {
         width: 30px;
@@ -564,11 +565,26 @@ blockquote {
         top: 12px;
         right: 10px;
         z-index: 5;
+        transition: all ease 0.01s;
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url('../img/icons/white-arrow.svg');
     }
+    &:hover {
+        .arrow-place{
+          filter: brightness(0) saturate(100%) invert(53%) sepia(88%) saturate(2416%) hue-rotate(162deg) brightness(89%) contrast(101%)  
+        }
+        .wrap-news-illustrate{
+            .news-illustrate{
+                transform: scale(1.1);
+            }
+        }
+        .news-text{
+            color: h.$accent-color
+        }
+    }
 }
+
 
 .wrap-news-illustrate {
     width: 100%;
@@ -576,8 +592,9 @@ blockquote {
     border-radius: 20px;
     margin-bottom: 24px;
     overflow: hidden;
-
+    
     .news-illustrate {
+        transition: all ease 0.3s;;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -591,6 +608,7 @@ blockquote {
     color: #000;
     text-align: left;
     line-height: 150%;
+    transition: all ease 0.3s;
 }
 
 .pagination {
@@ -1360,13 +1378,12 @@ blockquote {
     }
     .accordion:after {
         height: 1px;
-        right: 65px;
+        right: 42px;
         top: 56px;
         width: 31px;
     }
     .accordion:before {
-        right: 80px;
-        top: 40%;
+        right: 57px;
         top: 44px;
         height: 25px;
     }
@@ -1404,6 +1421,11 @@ blockquote {
     }
     .links_li .contacts-img {
         max-width: 38px;
+    }
+    .inner-tab .accordion .text {
+        font-size: 22px;
+        margin-right: 117px;
+        padding-right: 0px;
     }
 }
 
