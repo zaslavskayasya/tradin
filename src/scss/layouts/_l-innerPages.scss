@@ -95,6 +95,27 @@
     display: block;
     font-size: 20px;
     color: h.$accent-color;
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        left: 0px;
+        bottom: 1px;
+        background-color: h.$accent-color;
+        transition: width ease 0.3s;
+    }
+
+    // text-decoration: underline;
+    &:hover {
+        color: h.$accent-color;
+
+        &:after {
+            width: 100%;
+        }
+    }
 }
 
 .padding-wrap {
@@ -203,6 +224,7 @@ blockquote {
         width: 84%;
         padding-right: 0px;
         padding-left: 35px;
+        background-color: #fff;
     }
 
     &.card-link {
@@ -212,6 +234,77 @@ blockquote {
         // align-items: flex-start;
     }
 }
+
+.inner-tab{
+    margin-bottom: 20px;;
+    background-color: #fff;
+    .accordion{
+        .text{
+            font-size: 16px;
+            font-weight: 400;
+            z-index: 99999999;
+            position: relative;
+            padding-left: 0px;
+        }
+        &:before, &:after{
+            z-index: 99;
+        }
+        &:before{
+            top:11px;
+        }
+        &:after{
+            top: 22px;
+        }        
+    }
+}
+
+.inner-tab  .panel{ 
+    padding: 0px!Important;
+    transition: 0!Important;
+    position: relative;
+    z-index: 1;
+}
+
+.accordion{
+    background-color: #fff !important;
+    z-index: 99999;
+    position: relative;
+}
+
+.inner-tab.active  .panel{ 
+    padding: 60px 50px 10px 0px!Important; ;
+
+}
+
+// .inner-tab:not:first-child{ 
+//     margin-top: -60px;;
+// }
+
+// .wrap-tab{
+//     .inner-tab{
+//         .panel{
+//             padding: 68px 60px 60px 0px;
+//         }
+//         .panel.active{
+//             padding: 68px 60px 60px 0px;
+//         }
+//     }
+// }
+
+// .wrap-tab{
+//     .inner-tab{
+//         .panel.active{
+//             padding: 68px 60px 60px 0px;
+//         }
+//     }
+// }
+// .wrap-tab.active{
+//     .inner-tab.active{
+//         .panel{
+//             padding: 68px 60px 60px 0px;
+//         }
+//     }
+// }
 
 .accordion:after {
     content: '';
@@ -272,13 +365,18 @@ blockquote {
             color: h.$accent-color;
         }
     }
-
-    .panel {
-        // padding: 32px 18px 45px; 
-        padding: 48px 21px 0 53px;
-        padding-bottom: 44px;
-    }
+    // .panel {
+    //     // padding: 32px 18px 45px; 
+    //     padding: 48px 21px 0 53px;
+    //     padding-bottom: 44px;
+    // }
 }
+
+.wrap-tab.active > .panel{
+    padding: 48px 21px 0 53px;
+    padding-bottom: 44px;
+}
+
 
 .wrap-tab.inner-tab {
     .accordion.card-link {
@@ -330,13 +428,13 @@ blockquote {
     }
 }
 
-.wrap-tab.active {
-    .panel {
+.wrap-tab.active > .panel {    
         padding: 48px 21px 0 53px;
-    }
 }
 
-
+.inner-tab > .panel{
+    padding: 68px 51px 10px 0px;
+}
 
 .tabs.cards {
     padding: 3px 0px;
@@ -380,12 +478,19 @@ blockquote {
     padding-left: 20px;
 }
 
+
 .lists-wrap .list-item:before {
     content: counter(tab-counter) ". ";
     position: absolute;
     left: 0px;
 }
 
+.list-item.blue:before {
+    color: h.$accent-color;
+    // color: red;
+    font-size: 25px;;
+    font-weight: 700;
+}
 .margin-30 {
     height: 30px;
 }
@@ -778,10 +883,22 @@ blockquote {
     .page-pagination>.prev {
         margin-right: 20px;
     }
+    .accordion:after{    
+        right: 41px;
+
+    }
+    
+    .accordion:before{
+        right: 51px;
+    }
+
 }
 
 
 @media screen and(min-width: 1024px) {
+    .inner-tab .accordion .text {
+        font-size: 22px;
+    }
     .container-main {
         max-width: 990px;
     }
@@ -854,14 +971,13 @@ blockquote {
     }
 
     .card-icon-place {
-        position: relative;
         bottom: auto;
-        right: 0px;
-        width: 66px;
-        min-width: 66px;
-        height: 66px;
-        margin-bottom: 0px;
-
+        height: 60px;
+        margin-bottom: 0;
+        min-width: 56px;
+        position: relative;
+        right: -17px;
+        width: 58px;
     }
 
     .card-link {
@@ -972,7 +1088,7 @@ blockquote {
         padding: 48px 21px 0 149px;
     }
 
-    .wrap-tab.active .panel {
+    .wrap-tab.active > .panel {
         padding: 48px 21px 0 149px;
     }
 
@@ -1034,19 +1150,6 @@ blockquote {
 
 
 @media screen and (min-width: 1450px) {
-    .accordion:after {
-        height: 1px;
-        right: 89px;
-        top: 65px;
-        width: 39px;
-    }
-
-    .accordion:before {
-        right: 109px;
-        top: 40%;
-        top: 46px;
-        height: 39px;
-    }
 
     .dots-list li:before {
         height: 10px;
@@ -1076,9 +1179,9 @@ blockquote {
         }
     }
 
-    .wrap-tab.active .panel,
-    .wrap-tab .panel {
-        padding: 48px 91px 0 149px;
+    .wrap-tab.active > .panel,
+    .wrap-tab > .panel {
+        padding: 48px 91px 0 164px;
     }
 
     .wrap-news-illustrate {
@@ -1100,6 +1203,19 @@ blockquote {
         margin: 100px 0 100px;
         // padding-top: 80px;
     }
+    .accordion:after {
+        height: 1px;
+        right: 65px;
+        top: 56px;
+        width: 31px;
+    }
+    .accordion:before {
+        right: 80px;
+        top: 40%;
+        top: 44px;
+        height: 25px;
+    }
+
 }
 
 @media screen and(min-width: 1600px) {
@@ -1107,29 +1223,24 @@ blockquote {
         padding-top: 113px;
         padding-bottom: 60px;
     }
-
     .text-block {
         margin-bottom: 65px;
     }
-
     .wrap-tab .accordion.card-link .number:before {
         font-size: 56px;
     }
-
-    .accordion:after {
-        height: 1px;
-        right: 99px;
-        top: 65px;
-        width: 39px;
-    }
-
-    .accordion:before {
-        right: 119px;
-        top: 40%;
-        top: 47px;
-        height: 39px;
-    }
-
+    // .accordion:after {
+    //     height: 1px;
+    //     right: 99px;
+    //     top: 65px;
+    //     // width: 39px;
+    // }
+    // .accordion:before {
+    //     right: 119px;
+    //     top: 40%;
+    //     top: 47px;
+    //     // height: 39px;
+    // }
     .page-pagination>* {
         height: 67px;
         max-width: 67px;
@@ -1150,9 +1261,9 @@ blockquote {
         font-size: 23px;
     }
 
-    .wrap-tab.active .panel,
-    .wrap-tab .panel {
-        padding: 48px 91px 0 162px;
+    .wrap-tab.active > .panel,
+    .wrap-tab >.panel {
+        padding: 48px 91px 0 164px;
     }
 
     .attention-info {

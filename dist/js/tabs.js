@@ -1,72 +1,31 @@
-let acc = document.getElementsByClassName("accordion");
-let i;
+let accordions = document.querySelectorAll('.accordion');
+accordions?.forEach(accordion => {
+  accordion.addEventListener('click', () => {
+    let parentTop = accordion.closest('.panel, .wrap-tab');
+    let parent = accordion.parentElement;
+    let panel = accordion.nextElementSibling;
+    
+    let classListParent = parent.classList;
+    let classListPanel = panel.classList;
+    
+    classListPanel.toggle('active');
+    classListParent.toggle('active');
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.parentNode.classList.toggle("active");
-    // console.log(this.parentNode);
-    // this.closest('.panel').classList.toggle('active');
-    let panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
+    if (classListParent.contains('active')){
+      if (parent === parentTop){
+        panel.style.height = `${panel.scrollHeight}px`;
+      } else {
+        panel.style.height = `${panel.scrollHeight}px`;
+        parentTop.style.height = `${parseInt(parentTop.style.height) + panel.scrollHeight}px`;
+      }
     } else {
-        console.log(panel.scrollHeight);
-        console.log(panel.scrollHeight+ 150);
-
-      panel.style.maxHeight = panel.scrollHeight + 140 + "px";
-    } 
-  });
-}
-
-
-
-
-// let accI = document.getElementsByClassName("accordionI");
-// let b;     
-
-// for (b = 0; b < accI.length; b++) {
-//   accI[b].addEventListener("click", function() {
-//     this.parentNode.classList.toggle("active");
-//     // console.log(this.parentNode);
-//     // this.closest('.panel').classList.toggle('active');
-//     let panelI = this.nextElementSibling;
-//     if (panelI.style.maxHeight) {
-//       panelI.style.maxHeight = null;
-//     } else {
-//         console.log(panelI.scrollHeight);
-//         console.log(panelI.scrollHeight+ 150);
-
-//       panelI.style.maxHeight = panelI.scrollHeight + 140 + "px";
-//     } 
-//   });
-// }
-
-
-let ac = document.getElementsByClassName("accordi");
-let b;
-
-for (b = 0; b < ac.length; b++) {
-  ac[b].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.parentNode.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
-    let pane = this.nextElementSibling;
-    if (pane.style.display.height === "auto") {
-      pane.style.display.height = "0";
-    } else {
-      pane.style.display.height = "auto";
+      if (parent === parentTop){
+        panel.style.height = null;
+      } else {
+        parentTop.style.height = `${parseInt(parentTop.style.height) - panel.scrollHeight}px`;
+        panel.style.height = null;
+      }
     }
   });
-}
-
-
-
-// .wrap-tab
-//   .accordion.card-link
-//   .panel.lists-wrap
-// .wrap-tab
-//   .accordion.card-link
-//   .panel.lists-wrap
+});
 //# sourceMappingURL=tabs.js.map
