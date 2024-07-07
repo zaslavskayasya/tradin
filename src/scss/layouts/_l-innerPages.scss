@@ -871,6 +871,35 @@ blockquote {
     }
 }
 
+
+.back-block{
+
+}
+.contacts-back-block{
+    margin-bottom: 80px;
+    .top-name{
+        margin-bottom: 24px;
+    }
+    .links_li {
+        margin-bottom: 26px;
+    }
+    .links-header {
+        margin-bottom: 16px;
+    }
+    .map-wrap{
+        height: 157px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+
+        iframe{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
 @media screen and (min-width: 400px) {
     .page-pagination {
         gap: 8px;
@@ -953,6 +982,29 @@ blockquote {
     .accordion:before{
         right: 51px;
     }
+    .contacts-back-block{
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 40px 50px;
+    }
+
+    .top-part{
+        display: flex;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #DBDBDB;
+        margin-bottom: 60px;
+        justify-content: flex-start;
+        .top-name{
+            font-size: 20px ;
+            font-weight: 300;
+            width: 500px;
+            margin-right: 40px;
+        }
+    }
+    .contacts-back-block .links_li{
+        margin-bottom: 15px;
+    }
 
 }
 
@@ -991,6 +1043,20 @@ blockquote {
     .simple-image-wrap {
         margin: 35px 0px 64px;
         height: 412px;
+    }
+    .bottom-part{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .to-left{
+        min-width: 420px
+    }
+    .to-right{
+        width: 500px;
+    }
+    .contacts-back-block .map-wrap {
+        height: 500px;
     }
 
 }
@@ -1208,6 +1274,20 @@ blockquote {
         font-size: 26px;
         padding: 40px 0px;
     }
+    .top-part{
+        .top-name{          
+            margin-right: 70px;
+            padding-right: 50px;
+        }
+    }
+    .map-wrap {
+        width: 541px;
+    }
+    .contacts-li .links_a {
+        font-size: 24px;
+        font-weight: 300;
+    }
+
 }
 
 
@@ -1277,6 +1357,13 @@ blockquote {
         top: 44px;
         height: 25px;
     }
+    .contacts-back-block{
+        padding: 50px 65px;
+    }
+    .top-part .top-name{
+        font-size: 24px;
+        padding-right: 0px;
+    }        
 
 }
 
