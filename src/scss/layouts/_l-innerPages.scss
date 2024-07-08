@@ -929,6 +929,105 @@ blockquote {
     }
 }
 
+.simple-text-page{
+    h2{
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 185%;
+        text-align: left;
+        margin-bottom: 20px;;
+    }
+
+    time {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        position: relative;
+        color: h.$accent-color;
+        font-family: inherit;
+        font-size: 18px;
+
+        margin-left: 44px;
+    
+        &:before {
+            content: "";
+            position: absolute;
+            left: -42px;
+            width: 25px;
+            height: 17px;
+            display: block;
+            background-size: cover;
+            background-repeat: repeat;
+            background-image: url(../img/icons/calendar.svg);
+            // margin-right: 10px;
+        }           
+    }
+    p {
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: #000;
+        line-height: 180%;
+    }
+    a {
+        transition: color ease 0.3s;
+        position: relative;
+    
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            left: 0px;
+            bottom: 1px;
+            background-color: #000;
+            transition: width ease 0.3s;
+        }
+    
+        &:hover {
+            color: h.$accent-color;
+    
+            &:after {
+                width: 0%;
+            }
+        }
+    }
+    ul {
+        padding-top: 14px;
+    
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+    
+        li:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: h.$accent-color;
+        }
+    }
+    img {
+        margin: 35px 0px 64px;
+        height: 412px;
+        width: 100%;
+        border-radius: 20px;;
+    }
+
+}
+
+
+
 
 
 @media screen and (min-width: 400px) {
@@ -954,6 +1053,30 @@ blockquote {
         .news-item {
             width: 46%;
             margin: 0px 5px 25px;
+        }
+    }
+    .simple-text-page{
+        h2{
+            font-size: 20px;
+        }
+        ul {
+            font-size: 24px;
+            li:before {
+                top: 11px;
+            }
+        }
+        time{
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            position: relative;
+            color: h.$accent-color;
+            font-family: inherit;
+            font-size: 20px;
+            &:before {
+                width: 28px;
+                height: 21px;
+            }
         }
     }
 
@@ -1047,7 +1170,15 @@ blockquote {
     .container-main {
         max-width: 990px;
     }
-
+    .simple-text-page{
+        h2{
+            font-size: 30px;
+        }
+        p {
+            font-size: 24px;
+            line-height: 172%;
+        }
+    }
     .header-part {
         margin-bottom: 101px;
     }
@@ -1088,6 +1219,15 @@ blockquote {
     }
     .contacts-back-block .map-wrap {
         height: 500px;
+    }
+    blockquote {
+        font-size: 25px;
+        padding: 128px 15px 84px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    blockquote:before{
+        top: 48px;
     }
 
 }
@@ -1441,6 +1581,17 @@ blockquote {
     .text-block {
         margin-bottom: 65px;
     }
+
+    .simple-text-page{
+        h2{
+            font-size: 20px;
+            margin-bottom: 51px;;
+        }
+        p {
+            font-size: 36px;
+        }
+    }
+
     .wrap-tab .accordion.card-link .number:before {
         font-size: 56px;
     }
