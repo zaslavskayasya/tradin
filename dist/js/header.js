@@ -114,13 +114,16 @@ navIcons.forEach(function(icon) {
 headerIs.querySelectorAll('.has_childrens').forEach(li => {
     li.addEventListener('mouseenter', e => {
         let sub = li.querySelector('.sub-menu');
-        let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
-        let width = window.innerWidth;
-        let mustOffsetRight = 80;
-        let diff = (subWidth + offsetLeft + mustOffsetRight) - width;
+        if(sub){
 
-        if (0 < diff){
-            sub.style.left = `${parseFloat(getComputedStyle(sub)['left']) - diff}px`;
+            let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
+            let width = window.innerWidth;
+            let mustOffsetRight = 80;
+            let diff = (subWidth + offsetLeft + mustOffsetRight) - width;
+    
+            if (0 < diff){
+                sub.style.left = `${parseFloat(getComputedStyle(sub)['left']) - diff}px`;
+            }
         }
     });
 });
@@ -187,3 +190,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 //# sourceMappingURL=header.js.map
+
+let simplePages = document.querySelectorAll('.simple-text-page');
+
+if (simplePages.length > 0) {
+    simplePages.forEach(simplePage => {
+        let childElements = simplePage.querySelectorAll('h2, h3, h4, h5, p, ul, img, blockquote');
+
+        childElements.forEach(element => {
+            element.classList.add('scroll', 'sanimate');
+        });
+    });
+}
