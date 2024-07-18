@@ -148,7 +148,7 @@ headerIs.querySelectorAll('.has_childrens').forEach(li => {
 //     lastScrollTop = scrollTop;
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
+
     document.querySelectorAll('.back-image').forEach(block => {
         let {
             bg: bgImage,
@@ -185,4 +185,3 @@ document.addEventListener("DOMContentLoaded", function () {
             threshold: 0.4
         }).observe(block);
     });
-});
