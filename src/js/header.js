@@ -11,6 +11,16 @@ openMenuBtn.addEventListener('click', ()=>{
 });
 
 
+let menuItems = document.querySelectorAll('.header-menu_item');
+console.log(menuItems);
+
+menuItems.forEach((item)=>{
+    console.log(item);
+    item.classList.add('sanimate');
+    item.classList.add('fadeInLeft');
+})
+
+
 
 // closeMenuBtn.addEventListener('click', ()=>{
 //     headerIs.classList.remove('open-header')
@@ -33,7 +43,7 @@ openMenuBtn.addEventListener('click', ()=>{
 //     })
 // });
 
-let dropdownTriggers = document.querySelectorAll('.dropup');
+let dropdownTriggers = document.querySelectorAll('.has_children');
 
 function toggleDropdowns() {
     // Check screen width
@@ -111,7 +121,7 @@ navIcons.forEach(function(icon) {
 });
 
 
-headerIs.querySelectorAll('.has_childrens').forEach(li => {
+headerIs.querySelectorAll('.has_children').forEach(li => {
     li.addEventListener('mouseenter', e => {
         let sub = li.querySelector('.sub-menu');
         let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
