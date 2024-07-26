@@ -11,11 +11,11 @@ openMenuBtn.addEventListener('click', ()=>{
 });
 
 
-let menuItems = document.querySelectorAll('.header-menu_item');
-console.log(menuItems);
+let menuItems = document.querySelectorAll('.menu-item');
+
 
 menuItems.forEach((item)=>{
-    console.log(item);
+
     item.classList.add('sanimate');
     item.classList.add('fadeInLeft');
 })
@@ -43,7 +43,7 @@ menuItems.forEach((item)=>{
 //     })
 // });
 
-let dropdownTriggers = document.querySelectorAll('.has_children');
+let dropdownTriggers = document.querySelectorAll('.menu-item-has-children');
 
 function toggleDropdowns() {
     // Check screen width
@@ -121,7 +121,7 @@ navIcons.forEach(function(icon) {
 });
 
 
-headerIs.querySelectorAll('.has_children').forEach(li => {
+headerIs.querySelectorAll('.menu-item-has-children').forEach(li => {
     li.addEventListener('mouseenter', e => {
         let sub = li.querySelector('.sub-menu');
         let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
