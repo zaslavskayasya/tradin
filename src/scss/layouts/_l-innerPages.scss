@@ -46,6 +46,54 @@
     min-width: 300px;
     padding: 15px 29px;
     margin: 0 auto;
+    padding-top: 14px;
+    ul{
+        padding-top: 14px;
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+    
+        li:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: h.$accent-color;
+        }
+
+    }
+    a{
+
+        transition: color ease 0.3s;
+        position: relative;
+    
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            left: 0px;
+            bottom: 1px;
+            background-color: #000;
+            transition: width ease 0.3s;
+        }
+    
+        // text-decoration: underline;
+        &:hover {
+            color: h.$accent-color;
+    
+            &:after {
+                width: 0%;
+            }
+        }
+    }
 }
 
 .card {
@@ -411,18 +459,18 @@ blockquote {
     border-radius: 20px;
     z-index: -1;
 
-    p.standart-text {
+    p.standart-text, p {
         color: #000;
         font-weight: 300;
     }
 
-    .dots-list li:before {
+    ul li:before {
         height: 5px;
         width: 5px;
         top: 11px;
     }
 
-    .dots-list li {
+    ul li {
         margin-bottom: 15px;
         padding-left: 20px;
     }
@@ -468,18 +516,19 @@ blockquote {
 }
 
 
-.lists-wrap {
+.lists-wrap, ol {
     counter-reset: tab-counter;
 }
 
-.list-item {
+.list-item, ol > li {
     counter-increment: tab-counter;
     position: relative;
     padding-left: 20px;
 }
 
 
-.lists-wrap .list-item:before {
+.lists-wrap .list-item:before,
+ol li:before {
     content: counter(tab-counter) ". ";
     position: absolute;
     left: 0px;
@@ -522,14 +571,32 @@ blockquote {
 }
 
 .panel {
-    .dots-list {
+    ol , ul {
         padding-left: 0px;
         flex-direction: column;
-
-        li {
+        li{
             font-weight: 300;
+            color: #000;
+            font-weight: 300;
+            margin-bottom: 15px;
+            font-size: 19px;;
         }
     }
+    ol > li{
+        font-weight: 300;
+        color: #000;
+        font-weight: 300;
+        margin-bottom: 15px;
+        font-size: 19px;;  
+    }
+    // .dots-list {
+    //     padding-left: 0px;
+    //     flex-direction: column;
+
+    //     li {
+    //         font-weight: 300;
+    //     }
+    // }
 }
 
 .attention-head {
@@ -1164,11 +1231,17 @@ blockquote {
 
 
 @media screen and(min-width: 1024px) {
+    .panel ol  > li{
+        font-size: 24px;;
+    }
     .inner-tab .accordion .text {
         font-size: 22px;
     }
     .container-main {
         max-width: 990px;
+    }
+    .container-main ul li:before{
+        top: 16px;
     }
     .simple-text-page{
         h2{
@@ -1468,19 +1541,19 @@ blockquote {
 
 @media screen and (min-width: 1450px) {
 
-    .dots-list li:before {
+    ul li:before {
         height: 10px;
         top: 15px;
         width: 10px;
     }
 
-    .panel .dots-list li:before {
+    .panel ul > li:before {
         height: 10px;
         top: 15px;
         width: 10px;
     }
 
-    .panel .dots-list li {
+    .panel ul > li {
         margin-bottom: 20px;
         padding-left: 30px;
     }

@@ -76,6 +76,14 @@ body {
   margin-bottom: 74px;
 }
 
+h2{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+
 p.h2.title.s-24 {
   text-align: left;
   color: #000;
@@ -99,6 +107,7 @@ p.h2.title.s-20 {
 .h2.margin-small{
   margin-bottom: 16px;
 }
+
 .h3 {
   font-family: inherit;
   font-style: normal;
@@ -125,10 +134,15 @@ footer p {
   color: #fff
 }
 
-.bold {
+.bold, strong {
   font-weight: 700;
 }
-
+.container-main{
+  p{
+    color: #000;
+    line-height: 180%;
+  }
+}
 .standart-text {
   color: #000;
   line-height: 180%;
@@ -184,6 +198,9 @@ a.h2.thin{
     .h2{
       font-size: 25px;
     }
+    h2{
+      font-size: 25px;
+    }
     p.h2.title.s-24{
       font-size: 24px;
     }
@@ -197,11 +214,14 @@ a.h2.thin{
   .h2{
     font-size: 30px;
   }
+  h2{
+    font-size: 30px;
+  }
 
-  .standart-text,
-  p {
+  .standart-text,  p , .container-main ul li, ul > li, ol > li {
     font-size: 24px;
   }
+  
   p.h2.title.s-24{
     font-size: 30px;;
   }
@@ -224,6 +244,9 @@ a.h2.thin{
 
 @media screen and(min-width: 1600px){
   .h2{
+    font-size: 36px;
+  }
+  h2{
     font-size: 36px;
   }
   p.h2.title.s-20{

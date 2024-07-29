@@ -195,3 +195,20 @@ headerIs.querySelectorAll('.menu-item-has-children').forEach(li => {
             threshold: 0.4
         }).observe(block);
     });
+
+
+
+    let allTexts = document.querySelectorAll('p');
+    let allHeadersH2 = document.querySelectorAll('h2');
+    
+    allTexts.forEach((item)=>{
+        item.classList.add('sanimate');
+        item.classList.add('fadeInUp');
+    });
+
+    allHeadersH2.forEach((item)=>{
+        item.classList.add('sanimate');
+        item.classList.add('fadeInUp');
+    })
+
+    
