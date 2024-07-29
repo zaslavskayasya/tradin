@@ -139,32 +139,37 @@
     }
 }
 
-.pseudo-link {
-    display: block;
-    font-size: 20px;
-    color: h.$accent-color;
-    position: relative;
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 0%;
-        height: 1px;
-        left: 0px;
-        bottom: 1px;
-        background-color: h.$accent-color;
-        transition: width ease 0.3s;
+.card-link{
+    .pseudo-link{
+        font-size: 18px;
     }
-
-    // text-decoration: underline;
-    &:hover {
-        color: h.$accent-color;
-
-        &:after {
-            width: 100%;
+    .pseudo-link, a {
+        // display: block;
+        // font-size: 20px;
+        // color: h.$accent-color;
+        // &:after {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     width: 0%;
+        //     height: 1px;
+        //     left: 0px;
+        //     bottom: 1px;
+        //     background-color: h.$accent-color;
+        //     transition: width ease 0.3s;
+        // }
+    
+        // text-decoration: underline;
+        &:hover {
+            color: h.$accent-color;
+    
+            // &:after {
+            //     width: 100%;
+            // }
         }
     }
 }
+
 
 .padding-wrap {
     padding: 62px 0 19px;
@@ -872,18 +877,25 @@ ol li:before {
     }
 }
 
-.simple-image-wrap {
+.simple-image-wrap, .wp-block-image
+  {
     border-radius: 20px;
     overflow: hidden;
     height: 285px;
     margin: 25px 0px 56px;
 
-    .simple-image {
+    .simple-image, img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         margin-bottom: 56px;
     }
+}
+
+.panel .wp-block-image{
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 0px;
 }
 
 .attention-info {
@@ -1226,7 +1238,11 @@ ol li:before {
     .contacts-back-block .links_li{
         margin-bottom: 15px;
     }
-
+    .card-link{
+        .pseudo-link{
+            font-size: 20px;
+        }
+    }
 }
 
 
@@ -1275,7 +1291,7 @@ ol li:before {
         }
     }
 
-    .simple-image-wrap {
+    .simple-image-wrap , .wp-block-image{
         margin: 35px 0px 64px;
         height: 412px;
     }
@@ -1367,7 +1383,7 @@ ol li:before {
         padding-right: 20px;
     }
 
-    .pseudo-link {
+    .card .pseudo-link, .card a{
         font-size: 24px;
         text-align: right;
     }
@@ -1587,7 +1603,7 @@ ol li:before {
         width: 51px;
     }
 
-    .simple-image-wrap {
+    .simple-image-wrap, .wp-block-image {
         margin-bottom: 100px;
         height: 410px;
         margin: 100px 0 100px;
