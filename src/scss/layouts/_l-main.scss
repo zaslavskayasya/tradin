@@ -1,12 +1,11 @@
 @use '../helpers'as h;
 
-.hide {
+.hide,
+.sanimate {
     opacity: 0;
 }
 
 .sanimate {
-    opacity: 0;
-
     &.fadeInUp {
         animation-name: fadeInUp40;
         animation-duration: 700ms;

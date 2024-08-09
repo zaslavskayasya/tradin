@@ -4,7 +4,6 @@ let mainSlider = document.querySelector('.main-slider');
 mainSliderJQ.slick({
     dots: true,
     arrows: true,
-    infinite: false,
     slidesToShow: 1,
     fade: true,
     speed: 1500,
@@ -12,6 +11,7 @@ mainSliderJQ.slick({
     cssEase: 'linear'
 });
 
+let isUserUse = 0;
 let logo = document.querySelector('.logo');
 let mainSliderSlick = mainSliderJQ.slick('getSlick');
 let mainFirstSlide = mainSliderSlick?.$slides[0];
@@ -111,27 +111,54 @@ setTimeout(() => {
     mainFirstSlide.querySelector('.hide')?.classList.remove('hide');
     mainArrows.forEach(arrow => arrow.classList.add('sanimate', 'fadeInUp'));
     mainDots.classList.add('sanimate', 'fadeInUp');
-    mainFirstSlide.querySelectorAll('.sanimate').forEach(
-        el => el.classList.add('fadeInUp')
-    );
+    mainFirstSlide.querySelectorAll('.sanimate')?.forEach(el => el.classList.add('fadeInUp'))
 }, 400);
 
-function animateMainSlider(slick, remove = false) {
+function animateMainSlider(slick, action = 'click'){
     let animateName = 'fadeInUp';
     let currentSlideIdx = slick.currentSlide;
     let currentSlide = slick.$slides[currentSlideIdx];
     let currentSelectors = currentSlide.querySelectorAll('.sanimate');
-    currentSelectors.forEach(el => !remove ? el.classList.add(animateName) : el.classList.remove(animateName));
-}
 
-mainSliderJQ.on('beforeChange', (event, slick, next) => animateMainSlider(slick, true));
-mainSliderJQ.on('afterChange', (event, slick, next) => console.log(true));
-mainSliderJQ.on('swipe', (event, slick, direction) => animateMainSlider(slick));
+    mainSlider.querySelectorAll('.texts-block > .fadeInUp')
+        ?.forEach(el => el.classList.remove(animateName));
+
+    currentSelectors.forEach(el => {
+        if (['click', 'swipe'].includes(action)){
+            el.classList.add(animateName);
+        }
+    });
+
+    if (['before'].includes(action)){
+        if (!isUserUse){
+            let nextIdx = currentSlideIdx + 1;
+            let slidesCount = slick.$slides.length - 1;
+            slick.$slides[nextIdx > slidesCount ? 0 : nextIdx]
+                .querySelectorAll('.sanimate')
+                ?.forEach(el => el.classList.add(animateName));
+        }
+    }
+
+    isUserUse = 0;
+};
+    
+
+mainSliderJQ.on('beforeChange', (event, slick, next) => animateMainSlider(slick, 'before'));
+mainSliderJQ.on('swipe', (event, slick, direction) => {
+    isUserUse = 1;
+    animateMainSlider(slick, 'swipe');
+});
 mainDots.querySelectorAll('li').forEach(dot => {
-    dot.addEventListener('click', () => animateMainSlider(mainSliderSlick));
+    dot.addEventListener('click', () => {
+        isUserUse = 1;
+        animateMainSlider(mainSliderSlick, 'click');
+    });
 });
 mainArrows.forEach(
-    arrow => arrow.addEventListener('click', () => animateMainSlider(mainSliderSlick))
+    arrow => arrow.addEventListener('click', () => {
+        isUserUse = 1;
+        animateMainSlider(mainSliderSlick, 'click');
+    })
 );
 
 $('.clients-slider').slick({

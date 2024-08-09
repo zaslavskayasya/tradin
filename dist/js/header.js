@@ -1,29 +1,19 @@
 let openMenuBtn = document.querySelector('.menu-button');
-
 let headerIs = document.querySelector('.header');
-
-openMenuBtn.addEventListener('click', ()=>{
-    if (headerIs.classList.contains('open-header')) {
-        headerIs.classList.remove('open-header');
-        return;
-    }
-    headerIs.classList.add('open-header');
-});
+openMenuBtn?.addEventListener('click', () => headerIs?.classList.toggle('open-header'));
 
 
 // let menuContainer = document.querySelector('header'); // або інший контейнер
 let menuItems = document.querySelectorAll('.menu-item');
-let filteredMenuItems = Array.from(menuItems).filter((item) => {
+let filteredMenuItems = Array.from(menuItems).filter(item => {
     // Перевіряємо, чи елемент не знаходиться всередині .sub-menu
     return !item.closest('.sub-menu');
   });
 
 // console.log(filteredMenuItems);
 
-menuItems.forEach((item)=>{
-
-    item.classList.add('sanimate');
-    item.classList.add('fadeInLeft');
+menuItems.forEach(item => {
+    item.classList.add('sanimate', 'fadeInLeft');
 })
 
 
@@ -73,11 +63,7 @@ function toggleDropdowns() {
 
 function toggleDropdown(e) {
     let item = e.currentTarget;
-    if (item.classList.contains("open")) {
-        item.classList.remove("open");
-    } else {
-        item.classList.add("open");
-    }
+    item?.classList.toggle('open');
 }
 
 // Initial load
@@ -163,58 +149,46 @@ headerIs.querySelectorAll('.menu-item-has-children').forEach(li => {
 //     lastScrollTop = scrollTop;
 // });
 
+document.querySelectorAll('.back-image').forEach(block => {
+    let {
+        bg: bgImage,
+        bgMob: mobImage
+    } = block.dataset;
+    let url = `url(${window.innerWidth <= 760 ? mobImage : bgImage})`;
+    block.style.backgroundImage = url;
+});
 
-    document.querySelectorAll('.back-image').forEach(block => {
-        let {
-            bg: bgImage,
-            bgMob: mobImage
-        } = block.dataset;
-        let url = `url(${window.innerWidth <= 760 ? mobImage : bgImage})`;
-        block.style.backgroundImage = url;
+let blocks = document.querySelectorAll('.scroll.sanimate');
+let clientsSlides = document.querySelectorAll('.clients-slider > .slide.sanimate');
+
+clientsSlides.forEach((slide, index) => {
+    slide.style.animationDelay = `${index * 170}ms`;
+});
+
+let observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fadeInUp');
+            observer.unobserve(entry.target);
+        }
     });
+};
 
-    let blocks = document.querySelectorAll('.scroll.sanimate');
-    let clientsSlides = document.querySelectorAll('.clients-slider > .slide.sanimate');
+blocks.forEach(block => {
+    new IntersectionObserver(observerCallback, {
+        threshold: 0.3
+    }).observe(block);
+});
 
-    clientsSlides.forEach((slide, index) => {
-        slide.style.animationDelay = `${index * 170}ms`;
-    });
+clientsSlides.forEach(block => {
+    new IntersectionObserver(observerCallback, {
+        threshold: 0.4
+    }).observe(block);
+});
 
-    let observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fadeInUp');
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-
-    blocks.forEach(block => {
-        new IntersectionObserver(observerCallback, {
-            threshold: 0.3
-        }).observe(block);
-    });
-
-    clientsSlides.forEach(block => {
-        new IntersectionObserver(observerCallback, {
-            threshold: 0.4
-        }).observe(block);
-    });
-
-
-
-    let allTexts = document.querySelectorAll('p');
-    let allHeadersH2 = document.querySelectorAll('h2');
-    
-    allTexts.forEach((item)=>{
-        item.classList.add('sanimate');
-        item.classList.add('fadeInUp');
-    });
-
-    allHeadersH2.forEach((item)=>{
-        item.classList.add('sanimate');
-        item.classList.add('fadeInUp');
-    })
-
-    
+let allTexts = document.querySelectorAll('p, h2');
+allTexts?.forEach(item => {
+    if (!item.closest('.main-slider'))
+        item.classList.add('sanimate', 'fadeInUp');
+});
 //# sourceMappingURL=header.js.map
