@@ -11,15 +11,20 @@ openMenuBtn.addEventListener('click', ()=>{
 });
 
 
+// let menuContainer = document.querySelector('header'); // або інший контейнер
 let menuItems = document.querySelectorAll('.menu-item');
+let filteredMenuItems = Array.from(menuItems).filter((item) => {
+    // Перевіряємо, чи елемент не знаходиться всередині .sub-menu
+    return !item.closest('.sub-menu');
+  });
 
+// console.log(filteredMenuItems);
 
 menuItems.forEach((item)=>{
 
     item.classList.add('sanimate');
     item.classList.add('fadeInLeft');
 })
-
 
 
 // closeMenuBtn.addEventListener('click', ()=>{

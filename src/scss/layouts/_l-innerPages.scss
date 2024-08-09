@@ -509,6 +509,10 @@ blockquote {
         margin-left: -4px;
         margin-right: 4px;
         margin-top: 6px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
@@ -906,6 +910,18 @@ ol li:before {
     padding: 30px 0px;
 }
 
+.container-main{
+    .contact{
+        ul li{
+            padding-left: 0px;
+        }
+        ul li:before{
+            display: none;
+            padding-left: 0;
+        }
+    }
+}
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -966,8 +982,11 @@ ol li:before {
             font-size: 17px;
         }
     }
-}
 
+}
+.container-main .contact li>a:after, .container-main .contact p>a:after{
+    width: 0px;
+}
 
 .back-block{
 
@@ -1098,7 +1117,7 @@ ol li:before {
     }
     img {
         margin: 35px 0px 64px;
-        height: 412px;
+        height: auto;
         width: 100%;
         border-radius: 20px;;
     }
@@ -1247,8 +1266,14 @@ ol li:before {
 
 
 @media screen and(min-width: 1024px) {
+    .wrap-tab .icon-money{
+        height: 35px;
+        width: 35px;
+    }
+
     .panel ol  > li{
         font-size: 24px;;
+        padding-left: 30px;
     }
     .inner-tab .accordion .text {
         font-size: 22px;
@@ -1293,7 +1318,7 @@ ol li:before {
 
     .simple-image-wrap , .wp-block-image{
         margin: 35px 0px 64px;
-        height: 412px;
+        // height: 412px;
     }
     .bottom-part{
         display: flex;
@@ -1355,7 +1380,7 @@ ol li:before {
     }
 
     .h2 {
-        margin-bottom: 158px;
+        margin-bottom: 60px;
     }
 
     .card-icon-place {
@@ -1605,7 +1630,7 @@ ol li:before {
 
     .simple-image-wrap, .wp-block-image {
         margin-bottom: 100px;
-        height: 410px;
+        // height: 410px;
         margin: 100px 0 100px;
         // padding-top: 80px;
     }
@@ -1673,11 +1698,11 @@ ol li:before {
 
     .simple-text-page{
         h2{
-            font-size: 20px;
+            font-size: 36px;
             margin-bottom: 51px;;
         }
         p {
-            font-size: 36px;
+            font-size: 24px;
         }
     }
 

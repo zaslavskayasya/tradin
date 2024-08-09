@@ -70,10 +70,10 @@ body {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 20px!important;
   line-height: 185%;
   text-align: center;
-  margin-bottom: 74px;
+  // margin-bottom: 74px;
 }
 
 h2{
@@ -81,6 +81,7 @@ h2{
   font-style: normal;
   font-weight: 400;
   margin-bottom: 30px;
+  // padding-top: 35px;
 }
 
 
@@ -196,7 +197,7 @@ a.h2.thin{
 
 @media screen and (min-width: 760px){
     .h2{
-      font-size: 25px;
+      font-size: 25px!important;
     }
     h2{
       font-size: 25px;
@@ -212,7 +213,7 @@ a.h2.thin{
 
 @media screen and (min-width: 1024px){
   .h2{
-    font-size: 30px;
+    font-size: 30px!important;
   }
   h2{
     font-size: 30px;
@@ -244,7 +245,7 @@ a.h2.thin{
 
 @media screen and(min-width: 1600px){
   .h2{
-    font-size: 36px;
+    font-size: 36px!important;
   }
   h2{
     font-size: 36px;

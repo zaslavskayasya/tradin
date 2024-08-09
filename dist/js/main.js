@@ -4,9 +4,11 @@ let mainSlider = document.querySelector('.main-slider');
 mainSliderJQ.slick({
     dots: true,
     arrows: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     fade: true,
+    speed: 1500,
+    autoplay: true,
     cssEase: 'linear'
 });
 
@@ -123,6 +125,7 @@ function animateMainSlider(slick, remove = false) {
 }
 
 mainSliderJQ.on('beforeChange', (event, slick, next) => animateMainSlider(slick, true));
+mainSliderJQ.on('afterChange', (event, slick, next) => console.log(true));
 mainSliderJQ.on('swipe', (event, slick, direction) => animateMainSlider(slick));
 mainDots.querySelectorAll('li').forEach(dot => {
     dot.addEventListener('click', () => animateMainSlider(mainSliderSlick));
