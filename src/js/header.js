@@ -4,6 +4,8 @@ openMenuBtn?.addEventListener('click', () => headerIs?.classList.toggle('open-he
 
 
 // let menuContainer = document.querySelector('header'); // або інший контейнер
+
+
 let menuItems = document.querySelectorAll('.menu-item');
 let filteredMenuItems = Array.from(menuItems).filter(item => {
     // Перевіряємо, чи елемент не знаходиться всередині .sub-menu
@@ -12,7 +14,7 @@ let filteredMenuItems = Array.from(menuItems).filter(item => {
 
 // console.log(filteredMenuItems);
 
-menuItems.forEach(item => {
+filteredMenuItems.forEach(item => {
     item.classList.add('sanimate', 'fadeInLeft');
 })
 
@@ -145,7 +147,6 @@ headerIs.querySelectorAll('.menu-item-has-children').forEach(li => {
 //         return;
 //     }
 //     header.classList.remove('hidden');
-
 //     lastScrollTop = scrollTop;
 // });
 
