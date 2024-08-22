@@ -1,4 +1,4 @@
-*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+*:where(:not(iframe, canvas, em, img, svg, video):not(svg *)) {
   all: unset;
   display: revert;
 }
@@ -8,6 +8,9 @@
 *::after {
   box-sizing: border-box;
 }
+
+
+
 
 a,
 button {
@@ -30,4 +33,20 @@ table {
 
 textarea {
   white-space: revert;
+}
+
+
+em { 
+  font-style: italic;
+  font-style: italic!important;
+} 
+
+i { 
+  font-style: italic;
+  font-style: italic!important;
+} 
+
+.panel em, .panel i {
+  font-style: italic;
+  font-style: italic!important;
 }

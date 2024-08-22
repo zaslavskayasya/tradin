@@ -53,6 +53,7 @@
             position: relative;
             padding-left: 30px;
             margin-bottom: 25px;
+            align-items: center;
         }
     
         li:before {
@@ -278,6 +279,7 @@ blockquote {
         padding-right: 0px;
         padding-left: 35px;
         background-color: #fff;
+        font-weight: 400;
     }
 
     &.card-link {
@@ -1488,7 +1490,7 @@ ol li:before {
     }
 
     .accordion .text {
-        font-size: 36px;
+        font-size: 30px;
         padding-right: 116px;
         width: 96%;
     }
@@ -1709,18 +1711,12 @@ ol li:before {
     .wrap-tab .accordion.card-link .number:before {
         font-size: 56px;
     }
-    // .accordion:after {
-    //     height: 1px;
-    //     right: 99px;
-    //     top: 65px;
-    //     // width: 39px;
-    // }
-    // .accordion:before {
-    //     right: 119px;
-    //     top: 40%;
-    //     top: 47px;
-    //     // height: 39px;
-    // }
+    
+    .accordion .text {
+        font-size: 36px;
+    }
+
+
     .page-pagination>* {
         height: 67px;
         max-width: 67px;
