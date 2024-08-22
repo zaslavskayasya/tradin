@@ -9,7 +9,7 @@ mainSliderJQ.slick({
     speed: 1500,
     autoplay: true,
     cssEase: 'linear',
-    adaptiveHeight: true
+    // adaptiveHeight: true
 });
 
 let isUserUse = 0;
