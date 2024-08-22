@@ -30,11 +30,19 @@
             padding-bottom: 91px;
         }
 
-        .texts-block:not(:has(button)) {
-            padding-bottom: 91px;
-
-            :is(.h1) {
-                margin-bottom: 0;
+        .slide {
+            :is(.texts-block:not(:has(button))) {
+                .padding-block {
+                    height: 0;
+                }
+            }
+        
+            .texts-block:not(:has(button)) {
+                padding-bottom: 91px;
+    
+                :is(.h1) {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -1055,10 +1063,9 @@
         width: 824px;
     }
 
-    .main-slider .slide {
-
+    /* .main-slider .slide {
         height: 600px;
-    }
+    } */
 
 }
 
