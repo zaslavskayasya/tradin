@@ -1,4 +1,8 @@
-@use '../helpers' as h;
+@use '../helpers' as *;
+
+html:has(.header.open-header) {
+    overflow-y: hidden;
+}
 
 /* header */
 
@@ -198,15 +202,15 @@
         }
 
         &.active {
-            color: h.$accent-color;
+            color: $accent-color;
         }
 
         &:hover {
-            color: h.$accent-color;
+            color: $accent-color;
 
             .sub-menu li a:hover,
             .sub-menu li.active a {
-                color: h.$accent-color;
+                color: $accent-color;
             }
         }
 
@@ -236,14 +240,14 @@
         padding: 8px 0px;
 
         a {
-            font-family: h.$font-family;
+            font-family: $font-family;
             font-size: 18px;
             font-weight: 400;
             text-transform: none;
         }
 
         &.active a {
-            color: h.$accent-color;
+            color: $accent-color;
         }
     }
 }
