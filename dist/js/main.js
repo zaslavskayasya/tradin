@@ -171,7 +171,7 @@ mainArrows.forEach(
     })
 );
 
-let lastPadBotTextBlock, lastMarBotH1, lastMinHeiSlide, lastHeiSlide, lastValSave = 0;
+/* let lastPadBotTextBlock, lastMarBotH1, lastMinHeiSlide, lastHeiSlide, lastValSave = 0;
 
 function getPropStyle(elem, prop){
     return window.getComputedStyle(elem)[prop];
@@ -218,7 +218,7 @@ function checkCountMainSlider(event){
 }
 
 checkCountMainSlider();
-addEventListener('resize', checkCountMainSlider);
+addEventListener('resize', checkCountMainSlider); */
 
 
 $('.clients-slider').slick({

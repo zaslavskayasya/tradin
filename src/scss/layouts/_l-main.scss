@@ -1,4 +1,4 @@
-@use '../helpers'as h;
+@use '../helpers' as *;
 
 .hide,
 .sanimate {
@@ -21,16 +21,30 @@
 }
 
 .main-slider {
-    min-height: 740px;
     position: relative;
     height: auto;
+    min-height: auto;
+
+    :is(.slick-track > div:has(.slide):only-child) {
+        .texts-block:has(button) {
+            padding-bottom: 91px;
+        }
+
+        .texts-block:not(:has(button)) {
+            padding-bottom: 91px;
+
+            :is(.h1) {
+                margin-bottom: 0;
+            }
+        }
+    }
 
     .slide {
         position: relative;
         background-position: 60% 0%;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 740px;
+        // min-height: 740px;
     }
 
     &_image {
@@ -92,7 +106,7 @@
 
 
         &.slick-active button:before {
-            color: h.$accent-color;
+            color: $accent-color;
         }
     }
 
@@ -164,8 +178,8 @@
 }
 
 .subheader {
-    font-family: h.$font-family;
-    color: h.$accent-color;
+    font-family: $font-family;
+    color: $accent-color;
     font-size: 17px;
     text-align: center;
     font-weight: 800;
@@ -254,7 +268,7 @@
     }
 
     .slider-name {
-        font-family: h.$font-family;
+        font-family: $font-family;
         font-size: 20px;
         color: #fff;
         font-weight: 700;
@@ -295,7 +309,7 @@
 
 
         &.slick-active button:before {
-            color: h.$accent-color;
+            color: $accent-color;
         }
     }
 }
@@ -343,7 +357,7 @@
             }
 
             .icon-name {
-                color: h.$accent-color;
+                color: $accent-color;
             }
         }
     }
@@ -362,7 +376,7 @@
     }
 
     .icon-name {
-        font-family: h.$font-family;
+        font-family: $font-family;
         font-size: 16px;
         font-weight: 700;
         text-align: center;
@@ -390,7 +404,7 @@
     }
 
     .news-short {
-        font-family: h.$font-family;
+        font-family: $font-family;
         font-size: 21px;
         font-weight: 700;
         margin-bottom: 33px;
@@ -405,7 +419,7 @@
     }
 
     .sub-subheader {
-        font-family: h.$font-family;
+        font-family: $font-family;
         font-size: 21px;
         font-weight: 700;
         margin-bottom: 33px;
@@ -448,7 +462,7 @@
 
 
         &.slick-active button:before {
-            color: h.$accent-color;
+            color: $accent-color;
         }
     }
 
@@ -486,7 +500,7 @@
         padding-bottom: 20px;
 
         .advant-text {
-            font-family: h.$font-family;
+            font-family: $font-family;
             font-size: 26px;
             font-weight: 400;
         }
@@ -507,7 +521,7 @@
 
 .advantage-header {
     margin-bottom: 73px;
-    font-family: h.$font-family;
+    font-family: $font-family;
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
@@ -678,9 +692,6 @@
     }
 
     .main-slider {
-        min-height: auto;
-        height: 520px;
-
         .texts-block {
             width: 700px;
         }
