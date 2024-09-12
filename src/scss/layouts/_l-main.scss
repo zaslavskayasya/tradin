@@ -441,6 +441,8 @@
     }
 }
 
+
+
 .news-slider {
     .slick-list {
         margin: 0 -5px;
@@ -540,6 +542,65 @@
     text-transform: uppercase;
 }
 
+.new-white-block{
+    background-color: #fff;
+    padding: 50px 0px 67px ;
+    .subheader{
+        margin-bottom: 56px;
+    }
+}
+
+.docs-blocks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 62px;
+    justify-content: center;
+}
+
+.docs-item{
+    background-color: #12A1DC ;
+    color: #fff;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 20px 24px 10px;
+
+    width: 320px;
+
+    align-items: center;
+    justify-content: flex-start;
+    vertical-align: middle;
+    .image-part{
+        margin-right: 20px; 
+        width: 47px;
+        min-width: 47px;;
+    }
+    .docs-number{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 60%;
+    }
+    .docs-text {
+        font-size: 18px;
+        line-height: 130%;
+        font-weight: 400;
+        min-height: 54px;
+    }
+}
+
+.centered-text{
+    text-align: center ;
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+    .docs-counter{
+        color: #12A1DC;
+        font-weight: 600;
+        display: block;
+    }
+}
+
 
 @media screen and (min-width:340px) {
 
@@ -617,6 +678,12 @@
 }
 
 @media screen and (min-width: 760px) {
+    .docs-blocks {
+        justify-content: space-around;
+    }
+    .centered-text .docs-counter    {
+        display: inline;
+    }
     .news-wrap {
         display: flex;
         padding-left: 5%;
@@ -901,30 +968,27 @@
     .clients-slider .slide-inner, .clients-slider img {
         height: 368px !important;
     }
+
 }
 
 @media screen and (min-width: 1208px) {
     .advantage-header {
         font-size: 54px;
-
-
+    }
+    .docs-item{   
+        padding: 40px 24px 10px;
+        width: 293px;
     }
 
     .advantages-block .item .advant-text {
-        font-size: 36px;
-
-    }
+        font-size: 36px;    }
 
     .wrap-advantage .item:nth-child(2):before {
-
         left: -25%;
-
     }
 
     .wrap-advantage .item:nth-child(2):after {
-
         right: -19%;
-
     }
 
     .advantages-block {
@@ -1076,6 +1140,22 @@
 
 
 @media screen and (min-width: 1460px) {
+    
+.docs-item{   
+     padding: 40px 24px 10px;
+
+    .docs-number{
+        font-size: 46px;
+    }
+    .docs-text {
+        font-size: 21px;
+    }
+}
+
+.centered-text{    
+    font-size: 24px;
+}
+
     .main-slider .texts-block {
         width: 1133px;
     }
@@ -1140,8 +1220,49 @@
 
 
 @media screen and (min-width: 1600px) {
+    
+.new-white-block{
+    padding: 100px 0px 127px ;
+    .subheader{
+        margin-bottom: 56px;
+    }
+}
+
+.docs-blocks{
+    margin-bottom: 62px;;
+}
+
+.docs-item{   
+    padding: 40px 24px 10px;
+    width: 360px;   
+    .image-part{
+        margin-right: 20px; 
+        width: 47px;
+    }
+    .docs-number{
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 60%;
+    }
+    .docs-text {
+        font-size: 21px;
+        line-height: 130%;
+        font-weight: 400;
+    }
+}
+
+.centered-text{    
+    font-size: 24px;
+    color: #000;   
+    .docs-counter{
+        color: #12A1DC;
+        font-weight: 600;
+    }
+}
+
     .white-block {
         overflow: hidden;
+        padding: 200px 0;
     }
 
     .news-slider {
@@ -1151,15 +1272,17 @@
             left: -45px;
         }
     }
-
+    .news-slider .slick-list{
+        padding-left: 50px;
+    }
 
     .news-slider .slick-dots {
-        -webkit-transform: translate(-69%, -181px);
-        transform: translate(-69%, -181px);
+        -webkit-transform: translate(-70%, -181px);
+        transform: translate(-70%, -181px);
     }
 
     .main-news .slick-dotted.slick-slider {
-        margin-left: 55px;
+        margin-left: 5px;
     }
 
     .about {
@@ -1212,10 +1335,6 @@
         padding-bottom: 186px;
     }
 
-    .white-block {
-        padding: 282px 0;
-    }
-
     .news-wrap {
         padding-left: 10%;
     }
@@ -1233,7 +1352,6 @@
     .news-wrap h2.subheader {
         margin-bottom: 18px;
         font-size: 26px;
-
     }
 
     .news-wrap .sub-subheader {
@@ -1247,30 +1365,24 @@
         width: 548px;
     }
 
-
     .advantages-block {
         padding: 160px 0px;
     }
 
     .advantages-block .item .advant-text {
         font-size: 48px;
-
     }
 
     .wrap-advantage .item:nth-child(2):before {
-
         left: -20%;
-
     }
 
     .wrap-advantage .item:nth-child(2):after {
-
         right: 8%;
-
     }
 
     .advantage-header {
-        margin-bottom: 196px;
+        margin-bottom: 132px;
     }
 
     .wrap-advantage .item {
@@ -1283,12 +1395,10 @@
 
         &:nth-child(2) {
             width: 550px;
-
         }
 
         &:nth-child(3) {
             width: 490px;
-
         }
     }
 

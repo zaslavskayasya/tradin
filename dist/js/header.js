@@ -3,9 +3,6 @@ let headerIs = document.querySelector('.header');
 openMenuBtn?.addEventListener('click', () => headerIs?.classList.toggle('open-header'));
 
 
-// let menuContainer = document.querySelector('header'); // або інший контейнер
-
-
 let menuItems = document.querySelectorAll('.menu-item');
 let filteredMenuItems = Array.from(menuItems).filter(item => {
     // Перевіряємо, чи елемент не знаходиться всередині .sub-menu
@@ -18,27 +15,6 @@ filteredMenuItems.forEach(item => {
     item.classList.add('sanimate', 'fadeInLeft');
 })
 
-
-// closeMenuBtn.addEventListener('click', ()=>{
-//     headerIs.classList.remove('open-header')
-// });
-
-
-
-// let dropdownTriggers = document.querySelectorAll('.dropup');
-
-// dropdownTriggers.forEach((item, e)=>{
-//     item.addEventListener('click', (e)=>{
-//         // console.log(item);
-        
-//         if(item.classList.contains("open")){
-//             item.classList.remove("open");
-//         } else {
-//             item.classList.add("open");
-//         }
-
-//     })
-// });
 
 let dropdownTriggers = document.querySelectorAll('.menu-item-has-children');
 
@@ -127,28 +103,6 @@ headerIs.querySelectorAll('.menu-item-has-children').forEach(li => {
         }
     });
 });
-
-
-// let lastScrollTop = 0;
-// let header = document.querySelector('.header');
-// let debounceTimeout;
-// let scrollThreshold = 5;
-
-// window.addEventListener('scroll', () => {
-//     let scrollTop = window.scrollY;
-
-//     if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) {
-//     // Ігноруємо невеликі зміни прокрутки
-//         return;
-//     }
-
-//     if (scrollTop > lastScrollTop){
-//         header.classList.add('hidden');
-//         return;
-//     }
-//     header.classList.remove('hidden');
-//     lastScrollTop = scrollTop;
-// });
 
 document.querySelectorAll('.back-image').forEach(block => {
     let {
